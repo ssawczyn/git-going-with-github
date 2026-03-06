@@ -38,11 +38,71 @@
 .github/prompts/quick-web-check.prompt.md
 .github/prompts/quick-markdown-check.prompt.md
 
-# Registration data — contains personal information, stored as workflow artifacts only
-.github/data/
+# Registration PII — names, emails, accommodations are stored as workflow artifacts only
+.github/data/registrations.csv
+.github/data/student-emails.csv
+.github/data/student-sync-report.txt
+.github/data/welcome-email.txt
+.github/data/peer-reviewer-assignments.json
+
+# Root-level student data files (contain usernames scraped from issues)
+accepted-members.txt
+active-students.txt
+pending-students.txt
+registered-students.txt
+registered-students-from-issues.txt
+registration-data.csv
+valid-students.txt
+student-usernames.txt
+student-usernames-complete.txt
+org_invite_results.txt
+batch_create_issues_final.txt
+batch_create_issues_output_v2.txt
+issue_creation_log.txt
+temp_files.txt
+
+# One-time admin scripts with hardcoded student data (local facilitator tools only)
+scripts/add_beckyk.py
+scripts/update_roster_67.py
+scripts/update_roster_87.py
+scripts/batch_create_issues.py
+scripts/batch_create_issues_v2.py
+scripts/batch_create_challenges_unassigned.py
+scripts/invite_rate_limited_users.py
+scripts/manual_invite_commands.ps1
+scripts/retry_failed_invites.py
+scripts/remove_unregistered.py
+scripts/fix_challenge_1_issues.py
+scripts/update_challenge_1_issues.py
+scripts/remove_duplicate.py
+scripts/create_branches.ps1
+scripts/find_unregistered.py
+scripts/invite_students.py
+scripts/invite_students_as_org_members.py
+scripts/generate_complete_roster.py
+scripts/generate_peer_assignments.py
+scripts/generate_welcome_materials.py
+scripts/check_suspicious.py
+scripts/add_student.py
+scripts/add_student_and_invite.py
+scripts/reconcile_registrations.py
+scripts/sync_students_from_registration.py
+scripts/validate_roster.py
+scripts/create_assignment_issues.py
+scripts/configure_repo_permissions.py
+scripts/remove_org_members_after_workshop.py
+scripts/batch_create_challenges.py
+scripts/tests/test_batch_create_challenges.py
 
 # Registration admin guide — local reference only
 REGISTRATION-ADMIN.md
+ADMIN_TEST_PLAN.md
+STUDENT_MANAGEMENT.md
+check_registrations.py
+extract_usernames.py
+generate_roster.py
+html/ADMIN_TEST_PLAN.html
+html/STUDENT_MANAGEMENT.html
 
 # Node.js dependencies
 node_modules/

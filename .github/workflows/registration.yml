@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  contents: write
   issues: write
 
 jobs:
@@ -272,3 +273,92 @@ jobs:
           name: registrations
           path: .github/data/registrations.csv
           retention-days: 90
+
+  sync-roster:
+    name: Sync Student Roster (No PII)
+    runs-on: ubuntu-latest
+    if: >-
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'issues' &&
+      github.event.action == 'opened' &&
+      contains(github.event.issue.title, '[REGISTER]'))
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build roster from registration issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            // Fetch all issues with the registration label
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'registration',
+              state: 'all',
+              per_page: 100
+            });
+
+            function parseField(body, fieldName) {
+              if (!body) return '';
+              const regex = new RegExp(`### ${fieldName}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`, 'i');
+              const match = body.match(regex);
+              if (!match) return '';
+              const value = match[1].trim();
+              if (value === '_No response_') return '';
+              return value;
+            }
+
+            // Load existing roster to preserve runtime state (mergedPRs, currentLevel, badges)
+            const rosterPath = '.github/data/student-roster.json';
+            let roster = { students: [] };
+            if (fs.existsSync(rosterPath)) {
+              roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
+            }
+            const existing = new Map(roster.students.map(s => [s.username, s]));
+
+            // Deduplicate by username, keeping earliest registration
+            const seen = new Set();
+            const sorted = issues.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+            const students = [];
+
+            for (const issue of sorted) {
+              const username = issue.user.login;
+              if (seen.has(username)) continue;
+              seen.add(username);
+
+              // Preserve existing runtime fields if student was already in roster
+              const prev = existing.get(username) || {};
+
+              // Only store non-PII operational fields
+              students.push({
+                username,
+                joinedDate: prev.joinedDate || issue.created_at.split('T')[0],
+                mergedPRs: prev.mergedPRs || 0,
+                currentLevel: prev.currentLevel || 'Beginner',
+                interests: prev.interests || ['accessibility', 'open-source'],
+                timezone: prev.timezone || 'Unknown'
+              });
+            }
+
+            // Update roster — preserve cohort metadata, replace students list
+            roster.students = students;
+            roster._schema_note = 'Auto-populated by registration workflow. Contains only GitHub usernames and workflow state. No personal information.';
+
+            fs.mkdirSync('.github/data', { recursive: true });
+            fs.writeFileSync(rosterPath, JSON.stringify(roster, null, 2) + '\n', 'utf-8');
+            console.log(`Roster synced: ${students.length} student(s) from ${issues.length} registration issue(s)`);
+
+      - name: Commit roster update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/data/student-roster.json
+          if git diff --cached --quiet; then
+            echo "No roster changes to commit"
+          else
+            git commit -m "chore: sync student roster from registrations [skip ci]"
+            git push
+          fi
