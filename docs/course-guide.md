@@ -126,7 +126,7 @@ Open these at any time during the workshop. They are not part of the chapter seq
 |----------|----------|---------------|
 | [C](appendix-c-accessibility-standards.md) | **Accessibility Standards Reference** | WCAG 2.2, ARIA roles and patterns, PR accessibility checklist |
 | [D](appendix-d-git-authentication.md) | **Git Authentication** | SSH keys, Personal Access Tokens, credential storage, commit signing |
-| [E](appendix-e-github-flavored-markdown.md) | **GitHub Flavored Markdown** | Alert blocks, Mermaid diagrams, math, footnotes, heading anchors |
+| [E](appendix-e-github-flavored-markdown.md) | **Markdown and GitHub Flavored Markdown** | Complete guide from basics through GFM - paragraphs, headings, lists, links, tables, alert blocks, Mermaid, math, footnotes, accessible authoring |
 | [F](appendix-f-github-gists.md) | **GitHub Gists** | Code snippets, sharing, embedding, cloning |
 | [G](appendix-g-github-discussions.md) | **GitHub Discussions** | Forum-style conversations, Q&A, polls, accessibility navigation |
 | [H](appendix-h-releases-tags-insights.md) | **Releases, Tags, and Insights** | Versioned releases, semver, pulse, contributors, traffic |
