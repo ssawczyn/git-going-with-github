@@ -118,6 +118,36 @@ Next step unlocked             Ready to merge</code></pre>
 │   └── setup-guide.md                  ← Has broken links
 └── [other files for practice]</code></pre>
 <hr>
+<h2>Your Practice Branch</h2>
+<p>When you join the workshop, the facilitator creates a <strong>personal practice branch</strong> for you in the Learning Room repository. This branch is automatically created using your GitHub username with <code>-practice</code> appended:</p>
+<blockquote>
+<p><strong>Branch naming convention:</strong> <code>username-practice</code> (all lowercase)</p>
+</blockquote>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>If your GitHub username is <code>payown</code>, your practice branch is <code>payown-practice</code></li>
+<li>If your username is <code>BudgieMom</code>, your practice branch is <code>budgiemom-practice</code></li>
+<li>If your username is <code>Weijun-Zhang-1996</code>, your practice branch is <code>weijun-zhang-1996-practice</code></li>
+</ul>
+<h3>Why you have a practice branch</h3>
+<ul>
+<li><strong>Protected main branch</strong> - The <code>main</code> branch in the Learning Room is protected and requires pull requests for all changes</li>
+<li><strong>Your workspace</strong> - Your practice branch is where you commit and push changes before opening a PR</li>
+<li><strong>No conflicts</strong> - Each student has their own branch, so you will never accidentally overwrite someone else&#39;s work</li>
+<li><strong>Realistic workflow</strong> - This mirrors how real open source projects work - contributors create feature branches and submit pull requests</li>
+</ul>
+<h3>How to use your practice branch</h3>
+<ol>
+<li>When you clone the Learning Room repository locally (Chapter 11), switch to your practice branch:<pre><code class="hljs language-bash">git checkout username-practice</code></pre>
+</li>
+<li>Make your changes, commit them to your practice branch</li>
+<li>Push your practice branch to GitHub</li>
+<li>Open a pull request from your practice branch → <code>main</code></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> For GitHub web-based editing (Chapters 4-5), you can create temporary feature branches with descriptive names like <code>fix/welcome-todos</code> or <code>add/keyboard-shortcuts</code>. Your practice branch becomes essential when you start working locally with Git in Chapter 11.</p>
+</blockquote>
+<hr>
 <h2>The Practice Files: What You Will Work On</h2>
 <p>The <code>docs/</code> folder contains three practice files with intentional issues. These are the files you will edit, fix, and submit pull requests for during the contribution sprint. Here is exactly what you will encounter in each file.</p>
 <h3>docs/welcome.md - Introduction to Open Source Contribution</h3>

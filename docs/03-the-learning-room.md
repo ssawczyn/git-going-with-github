@@ -116,6 +116,38 @@ learning-room/
 
 ---
 
+## Your Practice Branch
+
+When you join the workshop, the facilitator creates a **personal practice branch** for you in the Learning Room repository. This branch is automatically created using your GitHub username with `-practice` appended:
+
+> **Branch naming convention:** `username-practice` (all lowercase)
+
+**Examples:**
+- If your GitHub username is `payown`, your practice branch is `payown-practice`
+- If your username is `BudgieMom`, your practice branch is `budgiemom-practice`
+- If your username is `Weijun-Zhang-1996`, your practice branch is `weijun-zhang-1996-practice`
+
+### Why you have a practice branch
+
+- **Protected main branch** - The `main` branch in the Learning Room is protected and requires pull requests for all changes
+- **Your workspace** - Your practice branch is where you commit and push changes before opening a PR
+- **No conflicts** - Each student has their own branch, so you will never accidentally overwrite someone else's work
+- **Realistic workflow** - This mirrors how real open source projects work - contributors create feature branches and submit pull requests
+
+### How to use your practice branch
+
+1. When you clone the Learning Room repository locally (Chapter 11), switch to your practice branch:
+   ```bash
+   git checkout username-practice
+   ```
+2. Make your changes, commit them to your practice branch
+3. Push your practice branch to GitHub
+4. Open a pull request from your practice branch → `main`
+
+> **Note:** For GitHub web-based editing (Chapters 4-5), you can create temporary feature branches with descriptive names like `fix/welcome-todos` or `add/keyboard-shortcuts`. Your practice branch becomes essential when you start working locally with Git in Chapter 11.
+
+---
+
 ## The Practice Files: What You Will Work On
 
 The `docs/` folder contains three practice files with intentional issues. These are the files you will edit, fix, and submit pull requests for during the contribution sprint. Here is exactly what you will encounter in each file.
