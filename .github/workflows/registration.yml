@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   issues: write
+  members: read
 
 jobs:
   welcome:
@@ -222,18 +223,40 @@ jobs:
               return value;
             }
 
+            // Fetch org members and pending invitations for OrgStatus column
+            let orgMembers = new Set();
+            let pendingInvites = new Set();
+            try {
+              const members = await github.paginate(github.rest.orgs.listMembers, {
+                org: context.repo.owner,
+                per_page: 100
+              });
+              for (const m of members) orgMembers.add(m.login.toLowerCase());
+
+              const invites = await github.paginate(github.rest.orgs.listPendingInvitations, {
+                org: context.repo.owner,
+                per_page: 100
+              });
+              for (const inv of invites) {
+                if (inv.login) pendingInvites.add(inv.login.toLowerCase());
+              }
+            } catch (e) {
+              console.log('Could not fetch org membership (may lack admin scope):', e.message);
+            }
+
             // Build CSV
             const headers = [
-              'Registration Date',
-              'GitHub Username',
-              'First Name',
-              'Last Name',
-              'Email Address',
-              'GitHub Proficiency Level',
-              'Primary Screen Reader',
-              'Questions or Accommodations',
-              'Issue Number',
-              'Issue URL'
+              'IssueNumber',
+              'State',
+              'CreatedAt',
+              'GitHubUsername',
+              'FirstName',
+              'LastName',
+              'Email',
+              'ProficiencyLevel',
+              'PrimaryScreenReader',
+              'QuestionsOrAccommodations',
+              'OrgStatus'
             ];
 
             let csv = headers.join(',') + '\n';
@@ -247,7 +270,15 @@ jobs:
               if (seen.has(username)) continue;
               seen.add(username);
 
+              // Determine org membership status
+              const uLower = username.toLowerCase();
+              let orgStatus = 'needs-invite';
+              if (orgMembers.has(uLower)) orgStatus = 'member';
+              else if (pendingInvites.has(uLower)) orgStatus = 'pending';
+
               const row = [
+                issue.number,
+                issue.state.toUpperCase(),
                 issue.created_at.split('T')[0],
                 username,
                 parseField(issue.body, 'First Name'),
@@ -256,22 +287,21 @@ jobs:
                 parseField(issue.body, 'GitHub Proficiency Level'),
                 parseField(issue.body, 'Primary Screen Reader'),
                 parseField(issue.body, 'Questions or Accommodations'),
-                issue.number,
-                issue.html_url
+                orgStatus
               ];
               csv += row.join(',') + '\n';
             }
 
             // Write CSV file
             fs.mkdirSync('.github/data', { recursive: true });
-            fs.writeFileSync('.github/data/registrations.csv', csv, 'utf-8');
-            console.log(`Exported ${seen.size} unique registration(s) from ${issues.length} total issue(s) to .github/data/registrations.csv`);
+            fs.writeFileSync('.github/data/registration-data.csv', csv, 'utf-8');
+            console.log(`Exported ${seen.size} unique registration(s) from ${issues.length} total issue(s) to .github/data/registration-data.csv`);
 
       - name: Upload CSV as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: registrations
-          path: .github/data/registrations.csv
+          name: registration-data
+          path: .github/data/registration-data.csv
           retention-days: 90
 
   sync-roster:

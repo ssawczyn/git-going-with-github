@@ -40,6 +40,7 @@
 
 # Registration PII — names, emails, accommodations are stored as workflow artifacts only
 .github/data/registrations.csv
+.github/data/registration-data.csv
 .github/data/student-emails.csv
 .github/data/student-sync-report.txt
 .github/data/welcome-email.txt
@@ -101,8 +102,19 @@ STUDENT_MANAGEMENT.md
 check_registrations.py
 extract_usernames.py
 generate_roster.py
+addmissing.bat
+wxpython-specialist-original.md
+filter-paths.txt
+members_raw.json
 html/ADMIN_TEST_PLAN.html
 html/STUDENT_MANAGEMENT.html
+html/AUTOMATION_TESTING_REPORT.html
+html/LEARNING_ROOM_AUTOMATION_SUMMARY.html
+html/REGRESSION_TEST_REPORT.html
+AUTOMATION_TESTING_REPORT.md
+REGRESSION_TEST_REPORT.md
+scripts/__init__.py
+scripts/tests/
 
 # Node.js dependencies
 node_modules/
