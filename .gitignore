@@ -68,6 +68,9 @@ $RECYCLE.BIN/
 # VS Code personal settings (workspace settings in .vscode/ are committed; personal settings are not)
 .vscode/settings.json
 
+# VS Code local history (backup files)
+.history/
+
 # Temporary and editor swap files
 *.tmp
 *.swp
