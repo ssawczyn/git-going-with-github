@@ -1,5 +1,5 @@
 "IssueNumber","State","CreatedAt","GitHubUsername","FirstName","LastName","Email","ProficiencyLevel","PrimaryScreenReader","QuestionsOrAccommodations","OrgStatus"
-"145","OPEN","3/6/2026 13:54","Glenn1212","Darrell","Bowles","darrell.bowles@bitsusers.org","Beginner - I have a GitHub account but have not done much with it","JAWS (Windows)","","pending"
+"145","OPEN","3/6/2026 13:54","Glenn1212","Darrell","Bowles","darrell.bowles@bitsusers.org","Beginner - I have a GitHub account but have not done much with it","JAWS (Windows)","","member"
 "144","OPEN","3/6/2026 8:58","crystalljohnson","crystal","johnson","crystal.johnson@bitsusers.org","Brand new - I have never used GitHub before","JAWS (Windows)","","pending"
 "143","OPEN","3/6/2026 2:53","radinamatic","Radina","Matic","radina.matic@gmail.com","Intermediate - I have created repositories, filed issues, or opened pull requests","NVDA (Windows)","","member"
 "72","OPEN","3/5/2026 19:44","sam-cal1","sam","cal","sam.cal732@gmail.com","Beginner - I have a GitHub account but have not done much with it","NVDA (Windows)","","pending"
