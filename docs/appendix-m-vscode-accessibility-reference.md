@@ -177,15 +177,15 @@ The Accessible Diff Viewer presents file diffs as a structured, line-by-line lis
 
 ```text
 Accessible Diff Viewer
-├── Header (file path, change summary)
-├── Hunk 1 of N
-│   ├── Hunk location (line range)
-│   ├── Unchanged lines (context)
-│   ├── Modified/Added/Removed lines (with prefix)
-│   └── More unchanged lines (context)
-├── Hunk 2 of N
-│   └── ...
-└── Footer (totals: X additions, Y deletions)
++-- Header (file path, change summary)
++-- Hunk 1 of N
+|   +-- Hunk location (line range)
+|   +-- Unchanged lines (context)
+|   +-- Modified/Added/Removed lines (with prefix)
+|   +-- More unchanged lines (context)
++-- Hunk 2 of N
+|   +-- ...
++-- Footer (totals: X additions, Y deletions)
 ```
 
 #### Line prefixes

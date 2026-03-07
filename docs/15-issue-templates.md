@@ -195,13 +195,13 @@ Templates live in a specific folder in your repository:
 
 ```text
 your-repo/
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    │   ├── bug_report.md         ← Markdown template
-    │   ├── feature_request.md    ← Markdown template
-    │   ├── accessibility-bug.yml ← YAML form template
-    │   └── config.yml            ← Template chooser configuration
-    └── pull_request_template.md  ← PR template (singular)
++-- .github/
+    +-- ISSUE_TEMPLATE/
+    |   +-- bug_report.md         ← Markdown template
+    |   +-- feature_request.md    ← Markdown template
+    |   +-- accessibility-bug.yml ← YAML form template
+    |   +-- config.yml            ← Template chooser configuration
+    +-- pull_request_template.md  ← PR template (singular)
 ```
 
 **Markdown templates (`.md`):** Traditional template format. Pre-fills a text editor with structured Markdown content. Contributors edit the template directly, replacing instructions and placeholder text with their own content.

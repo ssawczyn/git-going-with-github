@@ -442,14 +442,14 @@ The **`/project-status`** command from Accessibility Agents gives you a live pro
 GitHub Project: Accessibility Agents Roadmap (3 active views)
 
 Column Breakdown:
-┌─────────────┬───────┬──────────────────┬─────────┬──────────────┐
-│ Column      │ Items │ Assignees        │ Avg Age │ Stale (7d+) │
-├─────────────┼───────┼──────────────────┼─────────┼──────────────┤
-│ To Do       │   8   │ @alice(3),@bob(2) │ 5 days  │     1       │
-│ In Progress │   4   │ @charlie(2)       │ 3 days  │     0       │
-│ In Review   │   2   │ --               │ 2 days  │     0       │
-│ Done        │  23   │ --               │  --     │    --       │
-└─────────────┴───────┴──────────────────┴─────────┴──────────────┘
++-------------+-------+------------------+---------+--------------+
+| Column      | Items | Assignees        | Avg Age | Stale (7d+) |
++-------------+-------+------------------+---------+--------------+
+| To Do       |   8   | @alice(3),@bob(2) | 5 days  |     1       |
+| In Progress |   4   | @charlie(2)       | 3 days  |     0       |
+| In Review   |   2   | --               | 2 days  |     0       |
+| Done        |  23   | --               |  --     |    --       |
++-------------+-------+------------------+---------+--------------+
 
 Attention Items:
   Stale: "Update screen reader navigation guide" - In Review for 9 days, no activity

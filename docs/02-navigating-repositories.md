@@ -30,25 +30,25 @@ Use this sequence before moving to graded chapters:
 When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-name`), you land on the **repository home page** (also called the Code tab). This page has several distinct regions:
 
 ```text
-┌────────────────────────────────────────────────────┐
-│  Navigation bar (GitHub global nav)                │
-│  avatar menu | Notifications | search               │
-├────────────────────────────────────────────────────┤
-│  Repository header                                  │
-│  owner / repo-name  (h1)                            │
-│  [Star] [Watch] [Fork] buttons                      │
-├────────────────────────────────────────────────────┤
-│  Repository navigation tabs (landmark)              │
-│  < Code > Issues  Pull requests  Actions  etc.      │
-├─────────────────────────────┬──────────────────────┤
-│  File tree / code panel     │  Sidebar              │
-│  Branch selector            │  About section        │
-│  Files table (t:table)      │  Topics               │
-│  Last commit message         │  Releases             │
-├─────────────────────────────┴──────────────────────┤
-│  README.md (rendered)                               │
-│  (a separate landmark region)                       │
-└────────────────────────────────────────────────────┘
++----------------------------------------------------+
+|  Navigation bar (GitHub global nav)                |
+|  avatar menu | Notifications | search               |
++----------------------------------------------------+
+|  Repository header                                  |
+|  owner / repo-name  (h1)                            |
+|  [Star] [Watch] [Fork] buttons                      |
++----------------------------------------------------+
+|  Repository navigation tabs (landmark)              |
+|  < Code > Issues  Pull requests  Actions  etc.      |
++-----------------------------+----------------------+
+|  File tree / code panel     |  Sidebar              |
+|  Branch selector            |  About section        |
+|  Files table (t:table)      |  Topics               |
+|  Last commit message         |  Releases             |
++-----------------------------+----------------------+
+|  README.md (rendered)                               |
+|  (a separate landmark region)                       |
++----------------------------------------------------+
 ```
 
 
