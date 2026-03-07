@@ -194,24 +194,10 @@ Your personal home (`github.com`) shows activity from repositories you follow. Y
 
 ## 5. Visual Map of a Repository Page
 
-This diagram shows the layout of a repository home page, from top to bottom:
-
-1. **Global Navigation** (landmark: "Navigation Menu") — GitHub logo, Search, Copilot, Pull Requests, Issues, Notifications bell, and your avatar.
-2. **Repository Tabs** (landmark: "Repository navigation") — Code, Issues (12), Pull requests (3), Actions, and more.
-3. **Repository Header** — The H1 heading "owner / repo-name" plus Star (42), Watch, and Fork (8) buttons.
-4. **Main content area** split into two columns:
-   - **Left: File Area** — Branch selector (main), Go to file button, Code button, and the File Table (a landmark) listing files like .github/, docs/, README.md with dates.
-   - **Right: Sidebar** — About section, description text, topics (accessibility), Releases (3), Contributors (5), Languages (Markdown 100%).
-5. **README** (landmark: "Repository files navigation") — The rendered README content.
-6. **Footer**
-
-<details>
-<summary>Visual diagram (Mermaid)</summary>
+A repository home page is laid out from top to bottom as follows. The Global Navigation bar (landmark: "Navigation Menu") contains the GitHub logo, Search, Copilot, Pull Requests, Issues, Notifications bell, and your avatar. Below that are the Repository Tabs (landmark: "Repository navigation") showing Code, Issues (12), Pull requests (3), Actions, and more. Next is the Repository Header, which is the H1 heading "owner / repo-name" plus Star (42), Watch, and Fork (8) buttons. The main content area is split into two columns. On the left is the File Area with the branch selector (main), Go to file button, Code button, and the File Table (a landmark) listing files like .github/, docs/, and README.md with dates. On the right is the Sidebar with the About section, description text, topics (accessibility), Releases (3), Contributors (5), and Languages (Markdown 100%). Below both columns is the rendered README (landmark: "Repository files navigation"), and at the bottom is the Footer.
 
 ```mermaid
 graph TD
-    accTitle: Repository page layout
-    accDescr: A GitHub repository page has a global navigation bar at top, then repository tabs, the repository header with star/watch/fork, a two-column layout with file area on left and sidebar on right, the rendered README below, and a footer.
     NAV["Global Navigation\nGitHub, Search, Copilot, PRs, Issues, Bell, You"]
     NAV --> TABS["Repository Tabs\nCode, Issues 12, Pull requests 3, Actions"]
     TABS --> HEADER["Repository Header\nowner / repo-name (H1)\nStar 42, Watch, Fork 8"]
@@ -222,14 +208,9 @@ graph TD
     README --> FOOTER["Footer"]
 ```
 
-</details>
-
 ### Screen reader navigation of this page
 
-- `1` → hear "owner/repo-name" (the H1, confirms you are on the right repo)
-- `D` → "Navigation Menu" → `D` → "Repository navigation" → `D` → "Main" (file tree area)
-- `T` → jump to the file table → `Ctrl+Alt+Down Arrow` to navigate rows
-- `D` → "Repository files navigation" → read the README
+Press 1 to hear "owner/repo-name" (the H1, confirms you are on the right repo). Press D to hear "Navigation Menu," then D again for "Repository navigation," then D again for "Main" (the file tree area). Press T to jump to the file table, then Ctrl+Alt+Down Arrow to navigate rows. Press D again to reach "Repository files navigation" and read the README.
 
 
 ## 6. Screen Reader Orientation Sequence

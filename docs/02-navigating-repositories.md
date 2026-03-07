@@ -29,23 +29,10 @@ Use this sequence before moving to graded chapters:
 
 When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-name`), you land on the **repository home page** (also called the Code tab). This page has several distinct regions:
 
-The repository home page is organized into these regions, from top to bottom:
-
-1. **Navigation bar** (GitHub global nav) — avatar menu, Notifications, search.
-2. **Repository header** — "owner / repo-name" as the H1 heading, plus Star, Watch, and Fork buttons.
-3. **Repository navigation tabs** (landmark) — Code (active), Issues, Pull requests, Actions, and more.
-4. **Main content area** split into two columns:
-   - **Left: File tree / code panel** — Branch selector, Files table (navigable as a table), last commit message.
-   - **Right: Sidebar** — About section, topics, releases.
-5. **README.md** (rendered) — A separate landmark region below the file tree.
-
-<details>
-<summary>Visual diagram (Mermaid)</summary>
+The repository home page is organized from top to bottom as follows. The Navigation bar (GitHub global nav) contains the avatar menu, Notifications, and search. Below that is the Repository header showing "owner / repo-name" as the H1 heading, plus Star, Watch, and Fork buttons. Next are the Repository navigation tabs (a landmark) with Code (active), Issues, Pull requests, Actions, and more. The main content area is split into two columns: on the left is the File tree / code panel with the branch selector, Files table (navigable as a table), and last commit message; on the right is the Sidebar with the About section, topics, and releases. Below both columns is the rendered README.md in a separate landmark region.
 
 ```mermaid
 graph TD
-    accTitle: Repository page layout
-    accDescr: A repository page has a navigation bar at top, then the repository header, navigation tabs, a two-column area with file tree on the left and sidebar on the right, and the rendered README below.
     NAV["Navigation bar\navatar menu, Notifications, search"]
     NAV --> HEADER["Repository header\nowner / repo-name (H1)\nStar, Watch, Fork"]
     HEADER --> TABS["Repository navigation tabs\nCode, Issues, Pull requests, Actions"]
@@ -54,8 +41,6 @@ graph TD
     FILETREE --> README["README.md (rendered)\nseparate landmark region"]
     SIDEBAR --> README
 ```
-
-</details>
 
 
 ## Landing on a Repository - What to Expect
