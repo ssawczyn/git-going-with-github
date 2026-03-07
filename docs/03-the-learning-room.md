@@ -23,8 +23,15 @@ Before starting Chapter 4 challenges, students should be able to:
 2. Explain issue -> branch -> PR -> review -> merge.
 3. Identify where bot feedback appears on PRs.
 
+The learning-room is a single shared repository. It has a protected main branch, and each student opens pull requests against it. For example: Student A's PR #12 is open and assigned to Student B for review, Student B's PR #13 is assigned to Student C, Student C's PR #14 is assigned to Student A, and Student A's earlier PR #11 has already been merged. More PRs appear as students contribute.
+
+<details>
+<summary>Visual diagram (Mermaid)</summary>
+
 ```mermaid
 graph TD
+    accTitle: Learning room branch structure
+    accDescr: The shared learning-room repository has a protected main branch. Students open pull requests assigned to each other for peer review. Merged PRs are closed.
     LR["learning-room (SHARED)"]
     LR --> MAIN["main branch (protected)"]
     LR --> PR12["Student A's PR #12\nopen, assigned to Student B for review"]
@@ -33,6 +40,8 @@ graph TD
     LR --> PR11["Student A's PR #11\nmerged, closed"]
     LR --> MORE["More PRs as students contribute"]
 ```
+
+</details>
 
 ### Why one shared repo?
 

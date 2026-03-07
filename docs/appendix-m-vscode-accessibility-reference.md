@@ -175,8 +175,15 @@ The Accessible Diff Viewer presents file diffs as a structured, line-by-line lis
 
 #### Top-level structure
 
+The Accessible Diff Viewer starts with a header showing the file path and change summary. It then shows each hunk (changed section) in order. Each hunk contains: the hunk location (line range), unchanged context lines, the modified, added, or removed lines with their prefix, and more context lines. After all hunks, a footer shows the totals for additions and deletions.
+
+<details>
+<summary>Visual diagram (Mermaid)</summary>
+
 ```mermaid
 graph TD
+    accTitle: Accessible Diff Viewer structure
+    accDescr: The viewer has a header with file path and change summary, then hunks containing line ranges, unchanged context, and modified lines. A footer shows total additions and deletions.
     ROOT["Accessible Diff Viewer"]
     ROOT --> HEADER["Header\nfile path, change summary"]
     ROOT --> H1["Hunk 1 of N"]
@@ -187,6 +194,8 @@ graph TD
     ROOT --> H2["Hunk 2 of N ..."]
     ROOT --> FOOTER["Footer\ntotals: X additions, Y deletions"]
 ```
+
+</details>
 
 #### Line prefixes
 

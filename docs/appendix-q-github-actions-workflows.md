@@ -55,8 +55,15 @@ Think of it as a robot assistant that every repository can optionally configure.
 
 Workflow files live in a specific, mandatory location:
 
+Workflow files live at your-repository/.github/workflows/. Example files include: ci.yml (runs tests on every push or PR), lint.yml (checks code style), a11y-scan.yml (accessibility scanning), and deploy.yml (deploys the site when code merges to main).
+
+<details>
+<summary>Visual diagram (Mermaid)</summary>
+
 ```mermaid
 graph TD
+    accTitle: GitHub Actions workflows folder structure
+    accDescr: Workflow files live at your-repository/.github/workflows/. Contains ci.yml for tests, lint.yml for code style, a11y-scan.yml for accessibility scanning, and deploy.yml for deployment.
     REPO["your-repository/"]
     REPO --> GH[".github/"]
     GH --> WF["workflows/"]
@@ -65,6 +72,8 @@ graph TD
     WF --> A11Y["a11y-scan.yml\nAccessibility scanning"]
     WF --> DEPLOY["deploy.yml\nDeploys on merge to main"]
 ```
+
+</details>
 
 The `.github/` folder is hidden by convention (starts with a dot). To find it:
 

@@ -190,8 +190,15 @@ gh pr list --search "review-requested:@me"
 
 ### Pull Request Tree Structure
 
+The GitHub Pull Requests panel has two top-level sections. "My Pull Requests" contains four filters: Assigned to Me, Created by Me, Waiting for my Review, and All Open. The repository section shows Local Pull Request Branches (checked out locally), All Open Pull Requests, and All Closed Pull Requests.
+
+<details>
+<summary>Visual diagram (Mermaid)</summary>
+
 ```mermaid
 graph TD
+    accTitle: GitHub Pull Requests panel tree structure
+    accDescr: The panel has two sections. My Pull Requests contains Assigned to Me, Created by Me, Waiting for my Review, and All Open. The Repository section shows Local Branches, All Open, and All Closed.
     ROOT["GitHub Pull Requests"]
     ROOT --> MY["My Pull Requests"]
     MY --> ASSIGNED["Assigned to Me"]
@@ -203,6 +210,8 @@ graph TD
     REPO --> OPEN["All Open Pull Requests"]
     REPO --> CLOSED["All Closed Pull Requests"]
 ```
+
+</details>
 
 #### Screen reader announcement example
 
