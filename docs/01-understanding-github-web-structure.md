@@ -198,36 +198,35 @@ Your personal home (`github.com`) shows activity from repositories you follow. Y
 
 ## 5. Visual Map of a Repository Page
 
-This diagram shows the layout of a repository home page. It is presented as ASCII art - every screen reader will read it correctly as text, left to right, top to bottom.
+This diagram shows the layout of a repository home page, from top to bottom:
 
-```text
-+----------------------------------------------------------+
-|  GLOBAL NAVIGATION (landmark: "Navigation Menu")         |
-|  [GitHub] [Search] [Copilot] [PRs] [Issues] [Bell] [You]|
-+----------------------------------------------------------+
-|  REPOSITORY TABS (landmark: "Repository navigation")     |
-|  [Code] [Issues 12] [Pull requests 3] [Actions] [...]   |
-+----------------------------------------------------------+
-|  REPOSITORY HEADER                                        |
-|  owner / repo-name  (this is the H1 heading)             |
-|  [Star 42]  [Watch]  [Fork 8]                             |
-+-----------------------------+----------------------------+
-|  FILE AREA                  |  SIDEBAR                   |
-|  Branch: [main v]           |  About                     |
-|  [Go to file]  [Code v]     |  Description text          |
-|                             |  Topics: accessibility     |
-|  FILE TABLE (landmark)      |  Releases: 3               |
-|  .github/     3 days ago    |  Contributors: 5           |
-|  docs/        2 days ago    |  Languages: Markdown 100%  |
-|  README.md    yesterday     |                            |
-+-----------------------------+----------------------------+
-|  README (landmark: "Repository files navigation")         |
-|  # Rendered README content here                           |
-|  ...                                                      |
-+----------------------------------------------------------+
-|  FOOTER                                                   |
-+----------------------------------------------------------+
+1. **Global Navigation** (landmark: "Navigation Menu") — GitHub logo, Search, Copilot, Pull Requests, Issues, Notifications bell, and your avatar.
+2. **Repository Tabs** (landmark: "Repository navigation") — Code, Issues (12), Pull requests (3), Actions, and more.
+3. **Repository Header** — The H1 heading "owner / repo-name" plus Star (42), Watch, and Fork (8) buttons.
+4. **Main content area** split into two columns:
+   - **Left: File Area** — Branch selector (main), Go to file button, Code button, and the File Table (a landmark) listing files like .github/, docs/, README.md with dates.
+   - **Right: Sidebar** — About section, description text, topics (accessibility), Releases (3), Contributors (5), Languages (Markdown 100%).
+5. **README** (landmark: "Repository files navigation") — The rendered README content.
+6. **Footer**
+
+<details>
+<summary>Visual diagram (Mermaid)</summary>
+
+```mermaid
+graph TD
+    accTitle: Repository page layout
+    accDescr: A GitHub repository page has a global navigation bar at top, then repository tabs, the repository header with star/watch/fork, a two-column layout with file area on left and sidebar on right, the rendered README below, and a footer.
+    NAV["Global Navigation\nGitHub, Search, Copilot, PRs, Issues, Bell, You"]
+    NAV --> TABS["Repository Tabs\nCode, Issues 12, Pull requests 3, Actions"]
+    TABS --> HEADER["Repository Header\nowner / repo-name (H1)\nStar 42, Watch, Fork 8"]
+    HEADER --> FILES["File Area\nBranch: main\nFile Table: .github/, docs/, README.md"]
+    HEADER --> SIDEBAR["Sidebar\nAbout, Topics, Releases 3\nContributors 5, Languages"]
+    FILES --> README["README (rendered)"]
+    SIDEBAR --> README
+    README --> FOOTER["Footer"]
 ```
+
+</details>
 
 ### Screen reader navigation of this page
 

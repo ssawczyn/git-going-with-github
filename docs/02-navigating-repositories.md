@@ -29,27 +29,33 @@ Use this sequence before moving to graded chapters:
 
 When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-name`), you land on the **repository home page** (also called the Code tab). This page has several distinct regions:
 
-```text
-+----------------------------------------------------+
-|  Navigation bar (GitHub global nav)                |
-|  avatar menu | Notifications | search               |
-+----------------------------------------------------+
-|  Repository header                                  |
-|  owner / repo-name  (h1)                            |
-|  [Star] [Watch] [Fork] buttons                      |
-+----------------------------------------------------+
-|  Repository navigation tabs (landmark)              |
-|  < Code > Issues  Pull requests  Actions  etc.      |
-+-----------------------------+----------------------+
-|  File tree / code panel     |  Sidebar              |
-|  Branch selector            |  About section        |
-|  Files table (t:table)      |  Topics               |
-|  Last commit message         |  Releases             |
-+-----------------------------+----------------------+
-|  README.md (rendered)                               |
-|  (a separate landmark region)                       |
-+----------------------------------------------------+
+The repository home page is organized into these regions, from top to bottom:
+
+1. **Navigation bar** (GitHub global nav) — avatar menu, Notifications, search.
+2. **Repository header** — "owner / repo-name" as the H1 heading, plus Star, Watch, and Fork buttons.
+3. **Repository navigation tabs** (landmark) — Code (active), Issues, Pull requests, Actions, and more.
+4. **Main content area** split into two columns:
+   - **Left: File tree / code panel** — Branch selector, Files table (navigable as a table), last commit message.
+   - **Right: Sidebar** — About section, topics, releases.
+5. **README.md** (rendered) — A separate landmark region below the file tree.
+
+<details>
+<summary>Visual diagram (Mermaid)</summary>
+
+```mermaid
+graph TD
+    accTitle: Repository page layout
+    accDescr: A repository page has a navigation bar at top, then the repository header, navigation tabs, a two-column area with file tree on the left and sidebar on the right, and the rendered README below.
+    NAV["Navigation bar\navatar menu, Notifications, search"]
+    NAV --> HEADER["Repository header\nowner / repo-name (H1)\nStar, Watch, Fork"]
+    HEADER --> TABS["Repository navigation tabs\nCode, Issues, Pull requests, Actions"]
+    TABS --> FILETREE["File tree / code panel\nBranch selector, Files table\nLast commit message"]
+    TABS --> SIDEBAR["Sidebar\nAbout section, Topics, Releases"]
+    FILETREE --> README["README.md (rendered)\nseparate landmark region"]
+    SIDEBAR --> README
 ```
+
+</details>
 
 
 ## Landing on a Repository - What to Expect
