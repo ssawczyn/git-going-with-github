@@ -8,8 +8,6 @@
 >
 > **Please complete this guide at least one day before the workshop.** If you run into any issues, [file an issue](https://github.com/community-access/git-going-with-github/issues) so we can help - we want Day 1 to start with everyone ready to go, not troubleshooting.
 
----
-
 ## Table of Contents
 
 1. [What You Will Need](#what-you-will-need)
@@ -24,8 +22,6 @@
 10. [Step 9 - Verification Checklist](#step-9---verification-checklist)
 11. [Other GitHub Access Methods (Reference Only)](#other-github-access-methods-reference-only)
 12. [Getting Help Before the Event](#getting-help-before-the-event)
-
----
 
 ## What You Will Need
 

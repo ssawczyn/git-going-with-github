@@ -6,8 +6,6 @@
 
 > **Read this before navigating GitHub for the first time.** This lesson gives you the mental model that makes every subsequent guide easier. Once you understand how GitHub pages are built - their landmark structure, heading hierarchy, and URL patterns - you will know how to orient yourself on any page you land on, even ones this guide never mentions.
 
----
-
 ## Table of Contents
 
 1. [GitHub's Three-Level Structure](#1-githubs-three-level-structure)
@@ -20,8 +18,6 @@
 8. [GitHub's Heading Hierarchy in Practice](#8-githubs-heading-hierarchy-in-practice)
 9. [How GitHub's Layout Changes by Viewport](#9-how-githubs-layout-changes-by-viewport)
 10. [The Mental Model - Building Your Internal Map](#10-the-mental-model---building-your-internal-map)
-
----
 
 ## 1. GitHub's Three-Level Structure
 
@@ -47,8 +43,6 @@ Level 3: A Repository - where all the work happens
 **Most of this workshop happens at Level 3.** Issues, pull requests, code, and actions all live inside a repository. When someone says "go to the repo," they mean Level 3.
 
 > **Screen reader orientation tip:** The first heading (`H` then `1`) on any page tells you what level you are on. On a repository page, it reads "owner/repo-name." On your profile page, it reads your username. On a settings page, it reads the settings category name.
-
----
 
 ## 2. What Is Always on Every GitHub Page
 
