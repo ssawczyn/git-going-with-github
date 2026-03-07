@@ -25,15 +25,14 @@ Before starting Chapter 4 challenges, students should be able to:
 
 The learning-room is a single shared repository. It has a protected main branch, and each student opens pull requests against it. For example: Student A's PR #12 is open and assigned to Student B for review, Student B's PR #13 is assigned to Student C, Student C's PR #14 is assigned to Student A, and Student A's earlier PR #11 has already been merged. More PRs appear as students contribute.
 
-```mermaid
-graph TD
-    LR["learning-room (SHARED)"]
-    LR --> MAIN["main branch (protected)"]
-    LR --> PR12["Student A's PR #12\nopen, assigned to Student B for review"]
-    LR --> PR13["Student B's PR #13\nopen, assigned to Student C for review"]
-    LR --> PR14["Student C's PR #14\nopen, assigned to Student A for review"]
-    LR --> PR11["Student A's PR #11\nmerged, closed"]
-    LR --> MORE["More PRs as students contribute"]
+```text
+learning-room (SHARED)
+├── main branch (protected)
+├── Student A's PR #12 (open, assigned to Student B for review)
+├── Student B's PR #13 (open, assigned to Student C for review)
+├── Student C's PR #14 (open, assigned to Student A for review)
+├── Student A's PR #11 (merged, closed)
+└── [More PRs as students contribute]
 ```
 
 ### Why one shared repo?

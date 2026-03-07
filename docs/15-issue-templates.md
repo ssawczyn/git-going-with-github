@@ -195,16 +195,15 @@ Templates live in a specific folder in your repository:
 
 Templates live inside your-repo/.github/. The ISSUE_TEMPLATE/ subfolder contains: bug_report.md (Markdown template), feature_request.md (Markdown template), accessibility-bug.yml (YAML form template), and config.yml (template chooser configuration). The pull_request_template.md file sits directly in .github/, not inside ISSUE_TEMPLATE/.
 
-```mermaid
-graph TD
-    REPO["your-repo/"]
-    REPO --> GH[".github/"]
-    GH --> IT["ISSUE_TEMPLATE/"]
-    IT --> BUG["bug_report.md\nMarkdown template"]
-    IT --> FEAT["feature_request.md\nMarkdown template"]
-    IT --> A11Y["accessibility-bug.yml\nYAML form template"]
-    IT --> CONFIG["config.yml\nTemplate chooser configuration"]
-    GH --> PRT["pull_request_template.md\nPR template (singular)"]
+```text
+your-repo/
+└── .github/
+    ├── ISSUE_TEMPLATE/
+    │   ├── bug_report.md         ← Markdown template
+    │   ├── feature_request.md    ← Markdown template
+    │   ├── accessibility-bug.yml ← YAML form template
+    │   └── config.yml            ← Template chooser configuration
+    └── pull_request_template.md  ← PR template (singular)
 ```
 
 **Markdown templates (`.md`):** Traditional template format. Pre-fills a text editor with structured Markdown content. Contributors edit the template directly, replacing instructions and placeholder text with their own content.
