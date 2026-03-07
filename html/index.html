@@ -30,7 +30,7 @@
   </nav>
   <main id="main-content" class="markdown-body">
     <h1>GIT Going with GitHub</h1>
-<p><a href="https://creativecommons.org/licenses/by/4.0/">License: CC BY 4.0</a> | <a href="https://community-access.org/git-going-with-github/">View Site</a> | <a href="https://community-access.org/git-going-with-github/docs/course-guide.html">Full Curriculum</a> | <a href="https://github.com/community-access/git-going-with-github/discussions">Discussion Forum</a> | <a href="https://community-access.org/git-going-with-github/REGISTER.html">Register</a></p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/">License: CC BY 4.0</a> | <a href="https://community-access.org/git-going-with-github/">View Site</a> | <a href="https://community-access.org/git-going-with-github/docs/course-guide.html">Full Curriculum</a> | <a href="https://github.com/community-access/git-going-with-github/discussions">Discussion Forum</a></p>
 <h2>You Belong in Open Source. Let Us Show You the Door.</h2>
 <blockquote>
 <p><strong>Note:</strong> Workshop content is being actively refined during the week of March 7, 2026. Students should expect updates to materials leading up to and during the course.</p>
@@ -73,11 +73,7 @@
 <td><a href="https://github.com">GitHub</a></td>
 </tr>
 </tbody></table>
-<h3>Registered: <span id="registration-count" aria-live="polite">loading...</span> out of 75 spots</h3>
-<hr>
-<blockquote>
-<p><strong>Registration is open!</strong> <a href="https://community-access.org/git-going-with-github/REGISTER.html"><strong>Register for the GIT Going with GitHub workshop</strong></a> - your seat is waiting.</p>
-</blockquote>
+<h3>Registration is now closed. Thank you to everyone who registered - let the learning begin!</h3>
 <hr>
 <blockquote>
 <p><strong>Join the conversation!</strong> Have a question before the workshop? Want to connect with other participants? Head to our <a href="https://github.com/community-access/git-going-with-github/discussions"><strong>Discussion Forum</strong></a> - introduce yourself, ask questions, and start building your network before Day 1.</p>
@@ -313,14 +309,9 @@
 <p>Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with <code>repo</code> scope before contributing. If you need help, contact the workshop organizers.</p>
 <p>Our <a href="https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html">Pre-Workshop Setup Guide</a> walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.</p>
 <hr>
-<h2>Register</h2>
-<p>Registration requires two steps. Both are required.</p>
-<p><strong>Step 1</strong> - Register for the Zoom session so you receive the meeting link before the workshop.</p>
-<p><strong>Step 2</strong> - Sign into your free <a href="https://github.com">GitHub</a> account, then file a GitHub issue with your name, email, and screen reader preference. You must be signed in to file the issue. If you do not have an account yet, <a href="https://github.com/signup">create one here</a> or the registration page will walk you through it.</p>
-<blockquote>
-<p><a href="https://community-access.org/git-going-with-github/REGISTER.html"><strong>Go to the registration page</strong></a> to complete both steps - it only takes a few minutes.</p>
-</blockquote>
-<p>Registered: <span id="registration-count-2" aria-live="polite">loading...</span> out of 75 spots</p>
+<h2>Registration Closed</h2>
+<p>Registration for GIT Going with GitHub is now closed. Thank you to everyone who signed up!</p>
+<p><strong>Already registered?</strong> Complete the <a href="https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html"><strong>Pre-Workshop Setup Guide</strong></a> before the workshop begins.</p>
 <hr>
 <h2>What Makes This Workshop Different</h2>
 <p>Most GitHub tutorials tell you what buttons to click. This one starts from a different place entirely: <strong>what does your screen reader announce when the page loads?</strong></p>
@@ -368,25 +359,5 @@ No. The workshop, all software, and all materials are free.</p>
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.org">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.org">community-access.org</a></p>
   </footer>
-  <script>
-(function() {
-  var url = 'https://api.github.com/search/issues?q=repo:community-access/git-going-with-github+label:registration+is:issue+is:open';
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.setRequestHeader('Accept', 'application/vnd.github+json');
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      try {
-        var count = JSON.parse(xhr.responseText).total_count;
-        var els = document.querySelectorAll('[id^="registration-count"]');
-        for (var i = 0; i < els.length; i++) {
-          els[i].textContent = count;
-        }
-      } catch (e) {}
-    }
-  };
-  xhr.onerror = function() {};
-  xhr.send();
-})();
-</script></body>
+</body>
 </html>

@@ -10,7 +10,6 @@ The full workshop curriculum, lesson materials, and reference guides are current
 
 ### In the Meantime
 
-- [**Register for the workshop**](https://community-access.org/git-going-with-github/REGISTER.html) - two steps: GitHub issue + Zoom registration
 - [**Join the Discussion Forum**](https://github.com/community-access/git-going-with-github/discussions) - ask questions, connect with fellow participants
 - [**Return to the home page**](https://community-access.org/git-going-with-github/)
 
