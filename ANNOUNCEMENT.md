@@ -1,6 +1,6 @@
 # GIT Going with GitHub
 
-[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://community-access.org/git-going-with-github/) | [Full Curriculum](https://community-access.org/git-going-with-github/docs/course-guide.html) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions) | [Register](https://community-access.org/git-going-with-github/REGISTER.html)
+[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://community-access.org/git-going-with-github/) | [Full Curriculum](https://community-access.org/git-going-with-github/docs/course-guide.html) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions)
 
 ## You Belong in Open Source. Let Us Show You the Door.
 
@@ -16,15 +16,10 @@ Sponsored by [Community Access](https://community-access.org) in partnership wit
 | **Time** | 12:00 PM - 8:00 PM Eastern (both days) |
 | **Location** | Online via [Zoom](https://zoom.us/) |
 | **Cost** | Free |
-| **Capacity** | 75 participants (limited seats) |
 | **Presented by** | [Community Access](https://community-access.org) |
 | **In partnership with** | [GitHub](https://github.com) |
 
-### Registered: <span id="registration-count" aria-live="polite">loading...</span> out of 75 spots
-
----
-
-> **Registration is open!** [**Register for the GIT Going with GitHub workshop**](https://community-access.org/git-going-with-github/REGISTER.html) - your seat is waiting.
+### Registration is now closed. Thank you to everyone who registered - let the learning begin!
 
 ---
 
@@ -201,17 +196,11 @@ Our [Pre-Workshop Setup Guide](https://community-access.org/git-going-with-githu
 
 ---
 
-## Register
+## Registration Closed
 
-Registration requires two steps. Both are required.
+Registration for GIT Going with GitHub is now closed. Thank you to all who registered!
 
-**Step 1** - Register for the Zoom session so you receive the meeting link before the workshop.
-
-**Step 2** - Sign into your free [GitHub](https://github.com) account, then file a GitHub issue with your name, email, and screen reader preference. You must be signed in to file the issue. If you do not have an account yet, [create one here](https://github.com/signup) or the registration page will walk you through it.
-
-> [**Go to the registration page**](https://community-access.org/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
-
-Registered: <span id="registration-count-2" aria-live="polite">loading...</span> out of 75 spots
+Already registered? Complete the [**Pre-Workshop Setup Guide**](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7 to make sure you are ready for Day 1.
 
 ---
 
