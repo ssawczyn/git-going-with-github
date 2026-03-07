@@ -313,15 +313,15 @@ When you open an issue, the page structure is:
 [Issue title - h1]
 [Open/Closed status badge]
 [Author, timestamp, comment count]
----------------------------------
+─────────────────────────────────
 [Issue description - Main content]   ← the original post
 [Labels, Assignees sidebar - h3s]
----------------------------------
+─────────────────────────────────
 [Activity / Timeline]                ← comments and events
   [First comment - h3]
   [Second comment - h3]
   ...
----------------------------------
+─────────────────────────────────
 [Add a comment - landmark]
 [Comment text area]
 [Close issue / Submit button]

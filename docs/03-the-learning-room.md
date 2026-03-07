@@ -25,12 +25,12 @@ Before starting Chapter 4 challenges, students should be able to:
 
 ```text
 learning-room (SHARED)
-+-- main branch (protected)
-+-- Student A's PR #12 (open, assigned to Student B for review)
-+-- Student B's PR #13 (open, assigned to Student C for review)
-+-- Student C's PR #14 (open, assigned to Student A for review)
-+-- Student A's PR #11 (merged, closed)
-+-- [More PRs as students contribute]
+├── main branch (protected)
+├── Student A's PR #12 (open, assigned to Student B for review)
+├── Student B's PR #13 (open, assigned to Student C for review)
+├── Student C's PR #14 (open, assigned to Student A for review)
+├── Student A's PR #11 (merged, closed)
+└── [More PRs as students contribute]
 ```
 
 ### Why one shared repo?
@@ -87,28 +87,28 @@ Next step unlocked             Ready to merge
 
 ```text
 learning-room/
-+-- README.md                           ← Getting started guide
-+-- AUTOMATION.md                       ← How the bot works
-+-- .github/
-|   +-- workflows/                      ← 3 automation workflows
-|   |   +-- learning-room-pr-bot.yml            (PR validation)
-|   |   +-- skills-progression.yml              (progress tracking)
-|   |   +-- student-grouping.yml                (peer pairing)
-|   +-- scripts/
-|   |   +-- validate-pr.js                      (validation logic)
-|   +-- data/
-|   |   +-- student-roster.json                 (your cohort info)
-|   |   +-- challenge-progression.json          (levels, badges)
-|   +-- docs/
-|       +-- LEARNING_PATHS.md                   (skill progression guide)
-|       +-- IMPLEMENTATION_GUIDE.md             (facilitator setup)
-+-- docs/
-|   +-- CHALLENGES.md                   ← 12 challenges (Beginner → Expert)
-|   +-- GROUP_CHALLENGES.md             ← 7 collaborative exercises
-|   +-- welcome.md                      ← Has [TODO] to complete
-|   +-- keyboard-shortcuts.md           ← Has intentional errors
-|   +-- setup-guide.md                  ← Has broken links
-+-- [other files for practice]
+├── README.md                           ← Getting started guide
+├── AUTOMATION.md                       ← How the bot works
+├── .github/
+│   ├── workflows/                      ← 3 automation workflows
+│   │   ├── learning-room-pr-bot.yml            (PR validation)
+│   │   ├── skills-progression.yml              (progress tracking)
+│   │   └── student-grouping.yml                (peer pairing)
+│   ├── scripts/
+│   │   └── validate-pr.js                      (validation logic)
+│   ├── data/
+│   │   ├── student-roster.json                 (your cohort info)
+│   │   └── challenge-progression.json          (levels, badges)
+│   └── docs/
+│       ├── LEARNING_PATHS.md                   (skill progression guide)
+│       └── IMPLEMENTATION_GUIDE.md             (facilitator setup)
+├── docs/
+│   ├── CHALLENGES.md                   ← 12 challenges (Beginner → Expert)
+│   ├── GROUP_CHALLENGES.md             ← 7 collaborative exercises
+│   ├── welcome.md                      ← Has [TODO] to complete
+│   ├── keyboard-shortcuts.md           ← Has intentional errors
+│   └── setup-guide.md                  ← Has broken links
+└── [other files for practice]
 ```
 
 

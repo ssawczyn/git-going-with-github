@@ -218,7 +218,7 @@ A PR page has three main tabs:
 [ Conversation ] [ Commits ] [ Files changed ]
                                 ↑ tab bar landmark
 
---- Conversation Tab ----------------------------------------
+─── Conversation Tab ────────────────────────────────────────
 [PR description - authored by opener]
 [Status checks summary]
 [Activity / review thread]
@@ -227,11 +227,11 @@ A PR page has three main tabs:
 [Merge controls (for maintainers)]
 [Comment box]
 
---- Commits Tab ---------------------------------------------
+─── Commits Tab ─────────────────────────────────────────────
 [List of commits, grouped by date - h3 for dates]
 [Each commit as a list item with SHA, message, author]
 
---- Files Changed Tab ----------------------------------------
+─── Files Changed Tab ────────────────────────────────────────
 [File filter search]
 [File tree (left panel)]
 [Diff for each file - each file is a heading]

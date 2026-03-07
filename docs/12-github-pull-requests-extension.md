@@ -192,15 +192,15 @@ gh pr list --search "review-requested:@me"
 
 ```text
 GitHub Pull Requests
-+-- My Pull Requests
-|   +-- Assigned to Me
-|   +-- Created by Me
-|   +-- Waiting for my Review
-|   +-- All Open
-+-- [Repository Name]
-|   +-- Local Pull Request Branches (checked out locally)
-|   +-- All Open Pull Requests
-|   +-- All Closed Pull Requests
+├── My Pull Requests
+│   ├── Assigned to Me
+│   ├── Created by Me
+│   ├── Waiting for my Review
+│   └── All Open
+├── [Repository Name]
+│   ├── Local Pull Request Branches (checked out locally)
+│   ├── All Open Pull Requests
+│   └── All Closed Pull Requests
 ```
 
 #### Screen reader announcement example

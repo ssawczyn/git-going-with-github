@@ -54,28 +54,28 @@ Before diving into communication norms, it helps to understand the workflow that
 
 ```text
 1. Create a branch
-   +- Branch off main with a descriptive name
+   └─ Branch off main with a descriptive name
       (e.g., fix/missing-alt-text, docs/update-contributing-guide)
 
 2. Make your changes and commit
-   +- Work in small, logical commits with clear messages
+   └─ Work in small, logical commits with clear messages
       Each commit should represent one coherent, complete change
 
 3. Open a Pull Request
-   +- Share your work early - even as a Draft PR
+   └─ Share your work early - even as a Draft PR
       Describe what you changed, why, and how to test it
       Link to the related issue (Closes #42)
 
 4. Discuss and review
-   +- Reviewers leave feedback → you refine your work
+   └─ Reviewers leave feedback → you refine your work
       This is collaborative, not adversarial
 
 5. Pass status checks
-   +- Automated tests and linting must pass
+   └─ Automated tests and linting must pass
       The project's quality gates exist to protect everyone
 
 6. Merge
-   +- A maintainer merges your PR into main
+   └─ A maintainer merges your PR into main
       The linked issue closes automatically
       Your contribution is now part of the project
 ```

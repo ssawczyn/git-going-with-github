@@ -57,12 +57,12 @@ Workflow files live in a specific, mandatory location:
 
 ```text
 your-repository/
-+-- .github/
-    +-- workflows/
-        +-- ci.yml              ← Runs tests on every push/PR
-        +-- lint.yml            ← Checks code style
-        +-- a11y-scan.yml       ← Accessibility scanning
-        +-- deploy.yml          ← Deploys the site when code merges to main
+└── .github/
+    └── workflows/
+        ├── ci.yml              ← Runs tests on every push/PR
+        ├── lint.yml            ← Checks code style
+        ├── a11y-scan.yml       ← Accessibility scanning
+        └── deploy.yml          ← Deploys the site when code merges to main
 ```
 
 The `.github/` folder is hidden by convention (starts with a dot). To find it:
