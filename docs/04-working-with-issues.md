@@ -64,6 +64,42 @@ Issues are not just task lists. They are collaborative spaces where clear commun
 
 ---
 
+## Local Git Alternative: Working from Your Clone
+
+<details>
+<summary>If you cloned the learning-room in Block 0 and prefer working locally</summary>
+
+During Block 0 you cloned the Learning Room repository to your computer. If you are comfortable in a terminal, you can use the GitHub CLI (`gh`) from inside that clone for every issue operation in this chapter. This is the same workflow covered in depth in [Chapter 11: Git and Source Control](11-git-source-control.md).
+
+**Verify your clone is ready:**
+
+```bash
+cd ~/Documents/learning-room   # or wherever you cloned it
+git status                      # should show "On branch main"
+```
+
+**Common issue commands from your local terminal:**
+
+```bash
+# List your assigned challenge issues
+gh issue list --assignee @me --label challenge
+
+# View a specific issue in the terminal
+gh issue view 42
+
+# Leave a comment on an issue
+gh issue comment 42 --body "I'd like to try this!"
+
+# Create a new issue interactively
+gh issue create
+```
+
+All of these produce the same result as the web interface. The chapter instructions work identically either way - choose whichever is more comfortable for you.
+
+</details>
+
+---
+
 ## What Is a GitHub Issue?
 
 An issue is a discussion thread attached to a repository. Issues are used for:

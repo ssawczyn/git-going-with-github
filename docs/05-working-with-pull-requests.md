@@ -63,6 +63,63 @@ A great PR is small, linked to an issue, and easy to review. Faster feedback bui
 
 ---
 
+## Local Git Alternative: The Full Branch-Edit-PR Workflow
+
+<details>
+<summary>If you cloned the learning-room in Block 0 and prefer working locally</summary>
+
+The web editor workflow (pencil button, "Propose changes") is the primary path taught in this chapter. If you cloned the Learning Room in Block 0 and are comfortable in a terminal, here is the local equivalent. This is the same workflow covered in depth in [Chapter 11: Git and Source Control](11-git-source-control.md).
+
+**Step 1 - Sync and create a feature branch:**
+
+```bash
+cd ~/Documents/learning-room
+git checkout main
+git pull origin main
+git checkout -b fix/welcome-todos
+```
+
+**Step 2 - Edit the file in your editor:**
+
+Open the file in VS Code or your preferred editor:
+
+```bash
+code docs/welcome.md
+```
+
+Make your changes and save the file.
+
+**Step 3 - Stage, commit, and push:**
+
+```bash
+git add docs/welcome.md
+git commit -m "Complete TODO sections in welcome.md"
+git push -u origin fix/welcome-todos
+```
+
+**Step 4 - Open a pull request:**
+
+```bash
+gh pr create --title "Complete TODO sections in welcome.md" \
+  --body "Closes #42" --base main
+```
+
+Or open interactively:
+
+```bash
+gh pr create
+```
+
+The GitHub CLI walks you through title, body, base branch, and reviewers.
+
+**What happens next is identical:** the Learning Room bot validates your PR, posts feedback, and you request a human reviewer - the same as the web workflow.
+
+> **Tip:** You can also use your `username-practice` branch instead of creating a feature branch. Switch to it with `git checkout username-practice` (replacing `username` with your GitHub username, all lowercase).
+
+</details>
+
+---
+
 ## What Is a Pull Request?
 
 A pull request (PR) is a proposal to merge changes from one branch into another. When you have:

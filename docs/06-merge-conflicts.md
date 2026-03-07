@@ -51,6 +51,61 @@ Merge conflicts are not failures. They are a normal collaboration checkpoint and
 
 ---
 
+## Local Git Alternative: Resolving Conflicts from Your Terminal
+
+<details>
+<summary>If you cloned the learning-room in Block 0 and prefer resolving conflicts locally</summary>
+
+The GitHub web conflict editor works well and is the primary method taught in this chapter. If you cloned the Learning Room in Block 0 and prefer working in your terminal, here is how to resolve conflicts locally. This is the same workflow covered in depth in [Chapter 11: Git and Source Control](11-git-source-control.md).
+
+**Step 1 - Sync main and merge into your branch:**
+
+```bash
+cd ~/Documents/learning-room
+git checkout main
+git pull origin main
+git checkout your-branch-name
+git merge main
+```
+
+If there is a conflict, Git will report which files are affected and stop the merge.
+
+**Step 2 - Open the conflicted file:**
+
+```bash
+code docs/welcome.md   # or your preferred editor
+```
+
+Look for the conflict markers:
+
+```text
+<<<<<<< HEAD
+Your version of the content
+=======
+The incoming version from main
+>>>>>>> main
+```
+
+**Step 3 - Resolve by editing:**
+
+- Keep the version you want (or combine both)
+- Delete all three marker lines (`<<<<<<<`, `=======`, `>>>>>>>`)
+- Save the file
+
+**Step 4 - Mark resolved, commit, and push:**
+
+```bash
+git add docs/welcome.md
+git commit -m "Resolve merge conflict in welcome.md"
+git push
+```
+
+Your PR on GitHub updates automatically with the resolved content. The same bot checks and human review process apply.
+
+</details>
+
+---
+
 ## What Is a Merge Conflict?
 
 A merge conflict occurs when two people have both changed the **same part of the same file** in **different ways**, and Git cannot automatically decide which version is correct.
