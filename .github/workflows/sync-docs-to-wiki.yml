@@ -30,7 +30,7 @@ jobs:
 
       - name: Sync docs to wiki
         run: |
-          rsync -av --delete docs/ wiki/
+          rsync -av --delete --exclude='.git' docs/ wiki/
           cd wiki
           git add -A
           if [ -n "$(git status --porcelain)" ]; then
