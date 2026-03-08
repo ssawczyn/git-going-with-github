@@ -1,4 +1,4 @@
-name: Build EPUB and Word
+name: Build EPUB, Word, and BRF
 
 on:
   push:
@@ -34,6 +34,17 @@ jobs:
       - name: Build EPUB and Word
         run: node scripts/build-epub.js
 
+      - name: Install liblouis (braille translator — no TTS needed)
+        run: sudo apt-get install -y liblouis-bin python3-louis
+
+      - name: Convert EPUB to BRF (Braille — no TTS required)
+        continue-on-error: true
+        run: |
+          mkdir -p epub/brf
+          pandoc epub/git-going-with-github.epub -f epub -t plain -o /tmp/book.txt
+          python3 scripts/build-brf.py /tmp/book.txt epub/brf/git-going-with-github.brf
+          ls -lh epub/brf/
+
       - name: Upload EPUB artifact
         uses: actions/upload-artifact@v4
         with:
@@ -48,14 +59,10 @@ jobs:
           path: epub/git-going-with-github.docx
           retention-days: 90
 
-      - name: Commit outputs to repository
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epub/git-going-with-github.epub epub/git-going-with-github.docx
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "chore: rebuild EPUB and Word from latest docs"
-            git push
-          else
-            echo "No changes to commit"
-          fi
+      - name: Upload BRF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-going-with-github-brf
+          path: epub/brf/
+          if-no-files-found: warn
+          retention-days: 90
