@@ -1,4 +1,4 @@
-name: Build EPUB and PDF
+name: Build EPUB and Word
 
 on:
   push:
