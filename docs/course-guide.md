@@ -115,12 +115,19 @@ Open these at any time during the workshop. They are not part of the chapter seq
 | [A](appendix-a-glossary.md) | **Glossary** | Every term, concept, and piece of jargon explained |
 | [B](appendix-b-screen-reader-cheatsheet.md) | **Screen Reader Cheat Sheet** | NVDA, JAWS, and VoiceOver navigation commands plus GitHub keyboard shortcuts |
 
+### Git Reference
+
+| Appendix | Document | What It Covers |
+|----------|----------|---------------|
+| [D](appendix-d-git-authentication.md) | **Git Authentication** | SSH keys, Personal Access Tokens, credential storage, commit signing |
+| [AA](appendix-aa-advanced-git.md) | **Advanced Git Operations** | Cherry-pick, interactive rebase, reset, revert, tags, detached HEAD, force push, bisect, git clean, branch protection for contributors |
+| [AB](appendix-ab-github-desktop.md) | **GitHub Desktop** | Visual Git client — clone, branch, stage, commit, push, cherry-pick, conflict resolution, accessibility notes |
+
 ### GitHub Features
 
 | Appendix | Document | What It Covers |
 |----------|----------|---------------|
 | [C](appendix-c-accessibility-standards.md) | **Accessibility Standards Reference** | WCAG 2.2, ARIA roles and patterns, PR accessibility checklist |
-| [D](appendix-d-git-authentication.md) | **Git Authentication** | SSH keys, Personal Access Tokens, credential storage, commit signing |
 | [E](appendix-e-github-flavored-markdown.md) | **Markdown and GitHub Flavored Markdown** | Complete guide from basics through GFM - paragraphs, headings, lists, links, tables, alert blocks, Mermaid, math, footnotes, accessible authoring |
 | [F](appendix-f-github-gists.md) | **GitHub Gists** | Code snippets, sharing, embedding, cloning |
 | [G](appendix-g-github-discussions.md) | **GitHub Discussions** | Forum-style conversations, Q&A, polls, accessibility navigation |
