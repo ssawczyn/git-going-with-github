@@ -89,6 +89,7 @@ jobs:
         with:
           name: git-going-with-github-daisy
           path: epub/daisy/
+          if-no-files-found: warn
           retention-days: 90
 
       - name: Upload BRF artifact
@@ -96,13 +97,14 @@ jobs:
         with:
           name: git-going-with-github-brf
           path: epub/brf/
+          if-no-files-found: warn
           retention-days: 90
 
       - name: Commit outputs to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epub/git-going-with-github.epub epub/git-going-with-github.docx
+          git add -f epub/git-going-with-github.epub epub/git-going-with-github.docx
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore: rebuild EPUB and Word from latest docs"
             git push
