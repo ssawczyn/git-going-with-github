@@ -23,8 +23,8 @@ jobs:
 
       - name: Install Pandoc
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y pandoc
+          curl -sL https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb -o pandoc.deb
+          sudo dpkg -i pandoc.deb
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -36,24 +36,25 @@ jobs:
 
       - name: Install DAISY Pipeline 2 CLI
         run: |
-          curl -sL https://github.com/daisy/pipeline-assembly/releases/download/v1.15.1/pipeline2-1.15.1_linux.zip -o pipeline2.zip
+          curl -sL https://github.com/daisy/pipeline-assembly/releases/download/v1.15.3/pipeline2-1.15.3_linux.zip -o pipeline2.zip
           unzip -q pipeline2.zip -d pipeline2
-          echo "$PWD/pipeline2/cli" >> $GITHUB_PATH
+          ls pipeline2/
 
       - name: Convert EPUB to DAISY (talking book)
         run: |
-          pipeline2/cli/dp2 epub3-to-daisy3 \
+          PIPELINE_DIR=$(find pipeline2 -name "dp2" -type f | head -1 | xargs dirname)
+          echo "Pipeline CLI at: $PIPELINE_DIR"
+          mkdir -p epub/daisy
+          $PIPELINE_DIR/dp2 epub3-to-daisy3 \
             --epub epub/git-going-with-github.epub \
-            --output epub/daisy/ \
-            --temp /tmp/dp2-daisy
+            --output epub/daisy/
 
       - name: Convert EPUB to BRF (Braille)
         run: |
-          pipeline2/cli/dp2 epub3-to-pef \
+          PIPELINE_DIR=$(find pipeline2 -name "dp2" -type f | head -1 | xargs dirname)
+          $PIPELINE_DIR/dp2 epub3-to-pef \
             --epub epub/git-going-with-github.epub \
-            --output epub/git-going-with-github.brf \
-            --temp /tmp/dp2-brf \
-            --stylesheet "http://www.daisy.org/pipeline/modules/braille/css-utils/transform/css-block.xsl" \
+            --output epub/ \
             --output-format brf
 
       - name: Upload EPUB artifact
