@@ -1,0 +1,53 @@
+name: Build EPUB
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'epub/metadata.yaml'
+      - 'epub/epub.css'
+      - 'scripts/build-epub.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pandoc
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build EPUB
+        run: node scripts/build-epub.js
+
+      - name: Upload EPUB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-going-with-github-epub
+          path: epub/git-going-with-github.epub
+          retention-days: 90
+
+      - name: Commit EPUB to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add epub/git-going-with-github.epub
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore: rebuild EPUB from latest docs"
+            git push
+          else
+            echo "No EPUB changes to commit"
+          fi

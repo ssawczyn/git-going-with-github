@@ -165,3 +165,4 @@ podcasts/tts/samples/
 *.onnx
 *.onnx.json
 *.wav
+epub/git-going-with-github.epub
