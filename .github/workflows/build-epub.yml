@@ -34,37 +34,17 @@ jobs:
       - name: Build EPUB and Word
         run: node scripts/build-epub.js
 
-      - name: Install DAISY Pipeline 2 CLI
-        run: |
-          curl -sL https://github.com/daisy/pipeline-assembly/releases/download/v1.15.3/pipeline2-1.15.3_linux.zip -o pipeline2.zip
-          unzip -q pipeline2.zip -d pipeline2
-          ls pipeline2/
-
-      - name: Start DAISY Pipeline 2 service
-        run: |
-          PIPELINE_DIR=pipeline2/daisy-pipeline
-          $PIPELINE_DIR/bin/pipeline2 &
-          echo "Waiting for Pipeline service to start..."
-          for i in $(seq 1 30); do
-            if curl -sf http://localhost:8181/ws/alive > /dev/null 2>&1; then
-              echo "Pipeline service is up"
-              break
-            fi
-            sleep 2
-          done
+      - name: Install liblouis (braille translator — no TTS needed)
+        run: sudo apt-get install -y liblouisutdml-bin
 
       - name: Convert EPUB to BRF (Braille — no TTS required)
         continue-on-error: true
         run: |
           mkdir -p epub/brf
-          # Create a minimal TTS config (required by DAISY Pipeline even for braille scripts)
-          echo '<?xml version="1.0" encoding="UTF-8"?><config></config>' > /tmp/tts-config.xml
-          # Use file:// URI as DAISY Pipeline requires it for local files
-          pipeline2/daisy-pipeline/cli/dp2 epub3-to-pef \
-            --source "file://$(pwd)/epub/git-going-with-github.epub" \
-            --data "file:///tmp/tts-config.xml" \
-            --output "$(pwd)/epub/brf/" || echo "BRF conversion failed - check dp2 logs above"
-          ls epub/brf/ || echo "No BRF output produced"
+          # Extract HTML from EPUB, then translate to BRF using liblouis (pure text→braille, zero TTS)
+          pandoc epub/git-going-with-github.epub -f epub -t html5 -o /tmp/book.html
+          file2brl /tmp/book.html epub/brf/git-going-with-github.brf || echo "BRF conversion failed"
+          ls -lh epub/brf/ || echo "No BRF output produced"
 
       - name: Upload EPUB artifact
         uses: actions/upload-artifact@v4
