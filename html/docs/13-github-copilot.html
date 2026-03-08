@@ -211,10 +211,14 @@
 <li><a href="#2-installing-github-copilot">Installing GitHub Copilot</a></li>
 <li><a href="#3-inline-suggestions---ghost-text-completions">Inline Suggestions - Ghost Text Completions</a></li>
 <li><a href="#4-github-copilot-chat---conversational-assistance">GitHub Copilot Chat - Conversational Assistance</a></li>
-<li><a href="#5-effective-prompting-for-documentation-work">Effective Prompting for Documentation Work</a></li>
-<li><a href="#6-custom-instructions-vs-custom-agents">Custom Instructions vs Custom Agents</a></li>
-<li><a href="#7-using-accessible-view-with-copilot-responses">Using Accessible View with Copilot Responses</a></li>
-<li><a href="#8-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a></li>
+<li><a href="#5-copilot-edits--making-multi-file-changes">Copilot Edits — Making Multi-File Changes</a></li>
+<li><a href="#6-agent-mode--let-copilot-drive">Agent Mode — Let Copilot Drive</a></li>
+<li><a href="#7-next-edit-suggestions">Next Edit Suggestions</a></li>
+<li><a href="#8-copilot-on-githubcom">Copilot on GitHub.com</a></li>
+<li><a href="#9-effective-prompting-for-documentation-work">Effective Prompting for Documentation Work</a></li>
+<li><a href="#10-custom-instructions-vs-custom-agents">Custom Instructions vs Custom Agents</a></li>
+<li><a href="#11-using-accessible-view-with-copilot-responses">Using Accessible View with Copilot Responses</a></li>
+<li><a href="#12-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a></li>
 </ol>
 <h2 id="1-what-is-github-copilot">1. What is GitHub Copilot</h2>
 <p>GitHub Copilot is an AI pair programmer that suggests code and text completions as you type. It can:</p>
@@ -755,7 +759,216 @@ What does this error mean? #terminalLastCommand</code></pre>
 <blockquote>
 <p><strong>Screen reader tip:</strong> After pressing <code>F1</code> and typing <code>copilot</code>, use <code>Down Arrow</code> to browse the filtered list. Your screen reader announces each action name. Press <code>Enter</code> to run the selected action on your current selection.</p>
 </blockquote>
-<h2 id="5-effective-prompting-for-documentation-work">5. Effective Prompting for Documentation Work</h2>
+<h2 id="5-copilot-edits--making-multi-file-changes">5. Copilot Edits — Making Multi-File Changes</h2>
+<p>Copilot Edits is the <strong>Edit</strong> chat mode. Instead of just answering questions, Copilot proposes actual file changes — shown as a diff — across multiple files at once. You review every change before anything is saved.</p>
+<p><strong>When to use it:</strong></p>
+<ul>
+<li>Renaming something used across many files</li>
+<li>Updating documentation to match a code change</li>
+<li>Adding the same pattern (e.g., error handling, a header comment) to multiple files</li>
+<li>Refactoring a section while keeping full control of what changes</li>
+</ul>
+<h3 id="how-to-use-copilot-edits">How to use Copilot Edits</h3>
+<ol>
+<li>Open Copilot Chat: <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>)</li>
+<li>At the bottom of the Chat panel, click the <strong>mode dropdown</strong> and select <strong>Edit</strong></li>
+<li>Add files to your <strong>working set</strong> — these are the files Copilot is allowed to edit:<ul>
+<li>Click <strong>&quot;Add Files...&quot;</strong> above the chat input, or</li>
+<li>Type <code>#</code> in the chat input and select a file from the picker, or</li>
+<li>Right-click a file in the Explorer and choose <strong>&quot;Add File to Copilot Edits&quot;</strong></li>
+</ul>
+</li>
+<li>Type your request: <em>&quot;Update all headings in these files to use sentence case&quot;</em> or <em>&quot;Add a screen reader tip callout to each section that has keyboard shortcuts&quot;</em></li>
+<li>Press <code>Enter</code> — Copilot shows a diff of proposed changes in each file</li>
+<li>Review the changes: use <strong>Accept</strong> or <strong>Reject</strong> on individual files, or <strong>Accept All</strong> / <strong>Reject All</strong></li>
+</ol>
+<blockquote>
+<p><strong>Nothing changes until you accept.</strong> Copilot Edits shows you the full diff first. You are always in control.</p>
+</blockquote>
+<h3 id="navigating-the-diff-with-a-screen-reader">Navigating the diff with a screen reader</h3>
+<ul>
+<li>Each changed file appears in the Chat panel as a collapsible section — Tab to it, press <code>Space</code> to expand</li>
+<li>Press <strong>Accept</strong> or <strong>Reject</strong> buttons (announced with the file name) to decide per file</li>
+<li>To review the changes line by line before deciding: the diff opens in the editor with <code>+</code> and <code>-</code> lines — navigate with <code>Arrow</code> keys in the terminal or diff view</li>
+</ul>
+<h3 id="working-set-tips">Working set tips</h3>
+<ul>
+<li>Start with a <strong>small working set</strong> (2–3 files) to see how Copilot interprets your request before expanding to the full project</li>
+<li>You can add or remove files from the working set mid-conversation</li>
+<li>Copilot will tell you if it needs a file that isn&#39;t in the working set — add it and ask again</li>
+</ul>
+<hr>
+<h2 id="6-agent-mode--let-copilot-drive">6. Agent Mode — Let Copilot Drive</h2>
+<p>Agent mode is the most autonomous way to use Copilot. You describe a goal and Copilot figures out what files to open, what changes to make, and what commands to run — asking for your approval when it needs to run something that has side effects.</p>
+<p><strong>When to use it:</strong></p>
+<ul>
+<li>Scaffolding a new feature from scratch</li>
+<li>Running a complex multi-step task that involves several files and commands</li>
+<li>Tasks where you&#39;re not sure which files need to change</li>
+</ul>
+<blockquote>
+<p><strong>Agent mode is powerful — and that&#39;s worth being thoughtful about.</strong> It can open, read, and edit files across your whole workspace and run terminal commands. Review its actions as it works, especially before approving terminal commands. Start with well-scoped tasks until you&#39;re comfortable with how it behaves.</p>
+</blockquote>
+<h3 id="how-to-use-agent-mode">How to use Agent mode</h3>
+<ol>
+<li>Open Copilot Chat: <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>)</li>
+<li>Select <strong>Agent</strong> from the mode dropdown at the bottom of the Chat panel</li>
+<li>Type your goal: <em>&quot;Add a Table of Contents to every Markdown file in the docs/ folder&quot;</em> or <em>&quot;Find all TODO comments in this project and create a GitHub issue for each one&quot;</em></li>
+<li>Copilot begins working — it shows each step it&#39;s taking and asks for approval before running terminal commands</li>
+<li>Watch the progress in the Chat panel; review any proposed changes in the editor</li>
+</ol>
+<h3 id="approving-terminal-commands">Approving terminal commands</h3>
+<p>When Agent mode wants to run a shell command (like <code>npm run build</code> or <code>git commit</code>), it pauses and shows you the command before running it.</p>
+<ul>
+<li><strong>Allow</strong> — run this command once</li>
+<li><strong>Allow Always</strong> — always allow this command type without asking again (use carefully)</li>
+<li><strong>Cancel</strong> — stop and don&#39;t run it</li>
+</ul>
+<blockquote>
+<p><strong>Screen reader tip:</strong> When Copilot pauses for approval, focus moves to the approval dialog in the Chat panel. Your screen reader announces the command Copilot wants to run and the approval options. Tab to your choice and press <code>Enter</code>.</p>
+</blockquote>
+<h3 id="agent-vs-edit-vs-ask--choosing-the-right-mode">Agent vs Edit vs Ask — choosing the right mode</h3>
+<table>
+<thead>
+<tr>
+<th scope="col">You want to...</th>
+<th scope="col">Use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ask a question or get an explanation</td>
+<td><strong>Ask</strong></td>
+</tr>
+<tr>
+<td>Make targeted changes to specific files you control</td>
+<td><strong>Edit</strong></td>
+</tr>
+<tr>
+<td>Complete a multi-step task and let Copilot navigate the workspace</td>
+<td><strong>Agent</strong></td>
+</tr>
+<tr>
+<td>Review and approve a plan before anything changes</td>
+<td><strong>Plan</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-next-edit-suggestions">7. Next Edit Suggestions</h2>
+<p>Next Edit Suggestions (NES) is a feature where Copilot watches what you&#39;re editing and predicts <strong>where you&#39;ll need to make your next change</strong> — then offers to make it for you. Unlike regular inline suggestions that complete what you&#39;re currently typing, NES looks ahead to related edits elsewhere in the file.</p>
+<p><strong>Example:</strong> You rename a variable on line 12. NES notices it&#39;s also used on lines 34 and 67 and offers to update those too — without you navigating there first.</p>
+<h3 id="turning-on-next-edit-suggestions">Turning on Next Edit Suggestions</h3>
+<ol>
+<li>Open Settings: <code>Ctrl+,</code> (Mac: <code>Cmd+,</code>)</li>
+<li>Search for <code>nextEditSuggestions</code></li>
+<li>Enable <strong>&quot;GitHub Copilot: Next Edit Suggestions&quot;</strong></li>
+</ol>
+<p>Or add to your <code>settings.json</code>:</p>
+<pre><code class="hljs language-json"><span class="hljs-attr">&quot;github.copilot.nextEditSuggestions.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span></code></pre>
+<h3 id="how-it-works-in-practice">How it works in practice</h3>
+<ul>
+<li>After making an edit, a <strong>tab stop indicator</strong> (an arrow <code>→</code> symbol) appears at the location of the predicted next edit</li>
+<li>Press <code>Tab</code> to jump there and accept the suggestion</li>
+<li>Press <code>Escape</code> to dismiss it and continue editing normally</li>
+<li>The indicator is subtle — if you don&#39;t see it, your next keystroke will proceed as normal</li>
+</ul>
+<blockquote>
+<p><strong>Screen reader tip:</strong> NES is announced as an inline suggestion at the predicted location. With screen reader optimized mode on (<code>Shift+Alt+F1</code>), VS Code announces when a next edit suggestion is available. Navigate to it with <code>Tab</code> and accept or dismiss as with any inline suggestion.</p>
+</blockquote>
+<hr>
+<h2 id="8-copilot-on-githubcom">8. Copilot on GitHub.com</h2>
+<p>You don&#39;t need VS Code to use Copilot. GitHub.com has Copilot built directly into the website — useful for quick questions, reviewing code in the browser, drafting PR descriptions, and more.</p>
+<h3 id="opening-copilot-chat-on-githubcom">Opening Copilot Chat on GitHub.com</h3>
+<ol>
+<li>Go to <a href="https://github.com">github.com</a> — you must be signed in</li>
+<li>Look for the <strong>Copilot icon</strong> (a circle with dot pattern) in the top navigation bar</li>
+<li>Click it (or press <code>?</code> then select Copilot from the command palette) to open the chat panel</li>
+<li>Type your question and press <code>Enter</code></li>
+</ol>
+<p>Copilot on GitHub.com has context about your repositories, issues, PRs, and code — you can reference them directly.</p>
+<h3 id="what-you-can-ask-copilot-on-githubcom">What you can ask Copilot on GitHub.com</h3>
+<pre><code class="hljs"># <span class="hljs-type">Ask</span> about a specific repository
+<span class="hljs-comment">&quot;Summarize the recent changes to the accessibility-agents repo&quot;</span>
+
+# <span class="hljs-type">Ask</span> about an issue
+<span class="hljs-comment">&quot;What are the open accessibility issues in this repo?&quot;</span>
+
+# <span class="hljs-type">Ask</span> about code
+<span class="hljs-comment">&quot;What does the auth module in this project do?&quot;</span>
+
+# <span class="hljs-type">General</span> coding questions
+<span class="hljs-comment">&quot;What&#x27;s the difference between git rebase and git merge?&quot;</span></code></pre>
+<h3 id="copilot-for-pull-request-summaries">Copilot for Pull Request Summaries</h3>
+<p>When you open a pull request on GitHub.com, Copilot can generate a description for you automatically.</p>
+<ol>
+<li>Start creating a new pull request: go to your branch and select <strong>&quot;Compare &amp; pull request&quot;</strong></li>
+<li>In the PR form, look for the <strong>✨ sparkle / Copilot icon</strong> next to the description field</li>
+<li>Click it — Copilot reads your commits and diff and writes a draft description</li>
+<li>Review and edit the draft — it typically includes what changed and why</li>
+<li>Submit the PR</li>
+</ol>
+<blockquote>
+<p><strong>This is a huge time-saver.</strong> Copilot-generated PR descriptions are usually a solid first draft. Always review them to add context a maintainer would need (like <em>why</em> you made the choice, not just <em>what</em> you changed).</p>
+</blockquote>
+<p><strong>Screen reader tip:</strong> The Copilot sparkle button is next to the description textarea. It&#39;s announced as a button labelled &quot;Copilot&quot; or &quot;Generate with Copilot.&quot; After clicking, the description field is populated — read through it with your screen reader before submitting.</p>
+<h3 id="copilot-for-code-review-on-githubcom">Copilot for Code Review on GitHub.com</h3>
+<p>Maintainers can use Copilot to review pull requests on GitHub.com. As a contributor, you may see <strong>Copilot-authored review comments</strong> on your PR — they look like regular review comments but are labelled &quot;Copilot&quot;.</p>
+<ul>
+<li>Copilot review comments work just like human review comments — respond, resolve, or address them</li>
+<li>They flag things like potential bugs, style inconsistencies, or missing edge cases</li>
+<li>You don&#39;t need to accept every suggestion — use your judgment</li>
+</ul>
+<h3 id="copilot-on-githubcom-vs-vs-code">Copilot on GitHub.com vs VS Code</h3>
+<table>
+<thead>
+<tr>
+<th scope="col">Feature</th>
+<th scope="col">GitHub.com</th>
+<th scope="col">VS Code</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chat (general questions)</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Repository / issue / PR context</td>
+<td>✅ Built-in</td>
+<td>✅ Via <code>@github</code></td>
+</tr>
+<tr>
+<td>Inline code suggestions</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Copilot Edits (multi-file)</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Agent mode</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PR description generation</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Code review comments</td>
+<td>✅ (for maintainers)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>No install required</td>
+<td>✅</td>
+<td>Requires extension</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="9-effective-prompting-for-documentation-work">9. Effective Prompting for Documentation Work</h2>
 <p>Copilot works best with clear, specific prompts. The more context you provide, the better the response.</p>
 <h3 id="anatomy-of-a-good-prompt">Anatomy of a Good Prompt</h3>
 <h4 id="bad-prompt">Bad prompt</h4>
@@ -823,7 +1036,7 @@ Add a &quot;Common Mistakes&quot; section at the end
 
 Format this as a table instead of a bulleted list</code></pre>
 <p>Copilot remembers the conversation context - just say what to change.</p>
-<h2 id="6-custom-instructions-vs-custom-agents">6. Custom Instructions vs Custom Agents</h2>
+<h2 id="10-custom-instructions-vs-custom-agents">10. Custom Instructions vs Custom Agents</h2>
 <p>Two distinct tools shape how Copilot behaves. Understanding the difference is critical for working with Accessibility Agents (see <a href="16-accessibility-agents.html">Chapter 16: Accessibility Agents</a>).</p>
 <h3 id="custom-instructions">Custom Instructions</h3>
 <p><strong>File:</strong> <code>.github/copilot-instructions.md</code></p>
@@ -998,7 +1211,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <li><strong>Beast Mode Accessibility Prompt</strong> - A community-maintained, comprehensive accessibility prompt that you can adapt for your own instructions: referenced in <a href="https://github.com/github/awesome-copilot">github.com/github/awesome-copilot</a></li>
 <li><strong>Markdown Accessibility Review Guidelines</strong> - A practical guide for reviewing Markdown output for accessibility, useful as a reference when writing documentation-focused instructions: <a href="https://github.com/github/accessibility/blob/main/docs/markdown-accessibility.md">Markdown Accessibility</a></li>
 </ul>
-<h2 id="7-using-accessible-view-with-copilot-responses">7. Using Accessible View with Copilot Responses</h2>
+<h2 id="11-using-accessible-view-with-copilot-responses">11. Using Accessible View with Copilot Responses</h2>
 <p>Copilot Chat responses stream in token by token. This is visually nice but can fragment screen reader announcements. <strong>Accessible View</strong> provides complete, structured access to generated content.</p>
 <blockquote>
 <p><strong>Not just for screen readers:</strong> Accessible View is also valuable for low vision users. It renders text at your configured editor font size in a clean pane without the Chat panel&#39;s smaller default font, cramped layout, or streaming animation.</p>
@@ -1062,7 +1275,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 </ul>
 <p><strong>NVDA/JAWS:</strong> Use <code>Arrow</code> keys to read line by line. Use <code>Ctrl+Home</code> to jump to the start.</p>
 <p><strong>VoiceOver:</strong> Interact with the code block (<code>VO+Shift+Down</code>) to read each line with proper structure.</p>
-<h2 id="8-keyboard-shortcuts-reference">8. Keyboard Shortcuts Reference</h2>
+<h2 id="12-keyboard-shortcuts-reference">12. Keyboard Shortcuts Reference</h2>
 <h3 id="copilot-inline-suggestions">Copilot Inline Suggestions</h3>
 <table>
 <thead>

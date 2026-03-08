@@ -633,5 +633,5 @@ Every healthy open source project has these files in the root of the repository:
 
 
 *Appendix B - look up any term here at any point during the workshop.*
-*Return to: [Day 1 Agenda](02-day1-agenda.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*
+*Return to: [Day 1 Agenda](../DAY1_AGENDA.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*
 *See also: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*
