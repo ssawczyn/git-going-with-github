@@ -58,7 +58,7 @@ jobs:
         run: |
           mkdir -p epub/brf
           pipeline2/daisy-pipeline/cli/dp2 epub3-to-pef \
-            --source "$(pwd)/epub/git-going-with-github.epub" \
+            --data "$(pwd)/epub/git-going-with-github.epub" \
             --output "$(pwd)/epub/brf/" \
             --output-file-format "(-daisy-locale: en-US)" || echo "BRF conversion failed - check dp2 logs above"
           ls epub/brf/ || echo "No BRF output produced"
