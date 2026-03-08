@@ -122,6 +122,14 @@ Open these at any time during the workshop. They are not part of the chapter seq
 | [D](appendix-d-git-authentication.md) | **Git Authentication** | SSH keys, Personal Access Tokens, credential storage, commit signing |
 | [AA](appendix-aa-advanced-git.md) | **Advanced Git Operations** | Cherry-pick, interactive rebase, reset, revert, tags, detached HEAD, force push, bisect, git clean, branch protection for contributors |
 | [AB](appendix-ab-github-desktop.md) | **GitHub Desktop** | Visual Git client — clone, branch, stage, commit, push, cherry-pick, conflict resolution, accessibility notes |
+| [AC](appendix-ac-github-cli.md) | **GitHub CLI Reference** | Installing, auth, repos, issues, PRs, releases, search, aliases, extensions, Copilot CLI, screen reader tips |
+| [AD](appendix-ad-git-security.md) | **Git Security for Contributors** | .gitignore deep dive, env variables, pre-commit hooks, accidentally committed secrets recovery, push protection, credential storage |
+
+### GitHub Community and Social
+
+| Appendix | Document | What It Covers |
+|----------|----------|---------------|
+| [AE](appendix-ae-github-social.md) | **GitHub Social — Stars, Following, and Finding Your Community** | Stars, watching repos, following people, home feed, Explore, Trending, Topics, Lists, building your profile presence |
 
 ### GitHub Features
 
