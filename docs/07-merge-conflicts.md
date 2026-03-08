@@ -26,7 +26,7 @@ Chapter 7 uses **one controlled practice challenge** so students can learn confl
 
 **Goal:** Identify the three types of conflict markers in a practice file, decide which content to keep, remove the markers, and submit a clean PR.
 
-**Where you are working:** the `learning-room` repository on GitHub.com (web editor) or in VS Code if you cloned locally.
+**Where you are working:** the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com (web editor) or in VS Code if you cloned locally.
 
 **Before you start:** Open your **assigned Chapter 7 challenge issue** (the one titled "Chapter 7.1: Resolve Conflict Markers (@yourname)"). The issue description tells you which practice file contains the conflict markers.
 

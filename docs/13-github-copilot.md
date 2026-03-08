@@ -42,7 +42,7 @@ Chapter 13 introduces **GitHub Copilot** for AI-assisted documentation and writi
 
 **Goal:** Install the GitHub Copilot Chat extension and verify it responds to prompts.
 
-**Where you are working:** VS Code desktop with the `learning-room` repository open.
+**Where you are working:** VS Code desktop with the [learning-room](https://github.com/Community-Access/learning-room) repository open.
 
 **Estimated time:** 3-5 minutes.
 

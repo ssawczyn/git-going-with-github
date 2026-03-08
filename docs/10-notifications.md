@@ -24,11 +24,11 @@ For this workshop, Chapter 10 is a **guided practice chapter**, not a graded aut
 
 **Goal:** Set up a useful notification workflow so you can keep up with reviews, mentions, and assignments without inbox overload.
 
-**Where you are working:** the GitHub.com notifications page and the `learning-room` repository settings.
+**Where you are working:** the GitHub.com notifications page and the [learning-room](https://github.com/Community-Access/learning-room) repository settings.
 
 **Estimated time:** 5-8 minutes.
 
-1. Open the `learning-room` repository on GitHub.com.
+1. Open the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com.
 2. Find the **Watch** button near the top-right of the repository page (next to Star and Fork).
 3. Activate the **Watch** dropdown and select **Participating and @mentions**. This means you only get notified when someone @mentions you or you are directly participating in a thread.
 4. Open the notifications inbox by navigating to `https://github.com/notifications` (or activate the bell icon in the GitHub header).
@@ -454,7 +454,7 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 > Once you have mastered manual notification management:
 >
 > - **In VS Code** - `@daily-briefing morning briefing` delivers the same information as your notification inbox, organized by priority and actionability, with the ability to reply, close, and merge from inside Copilot Chat
-> - **In your repo** - Fork `accessibility-agents` and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
+> - **In your repo** - Fork [accessibility-agents](https://github.com/Community-Access/accessibility-agents) and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
 > - **In the cloud** - GitHub Agentic Workflows can run on a schedule and post a team digest to a designated issue each morning, surfacing what needs attention before anyone opens their notifications
 >
 > *Your notification discipline today becomes the standard the agent enforces at scale tomorrow.*

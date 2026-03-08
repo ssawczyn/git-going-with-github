@@ -32,7 +32,7 @@ For this workshop, Chapter 5 is a **guided setup chapter** with a lightweight co
 
 **Estimated time:** 10-15 minutes.
 
-1. Open the `learning-room` repository on GitHub.com.
+1. Open the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com.
 2. Press `.` (the period key) on your keyboard. This launches **github.dev** - a full VS Code editor running in your browser. Wait a few seconds for it to load.
 3. Enable screen reader mode:
    - **Windows (NVDA/JAWS):** Press `Shift+Alt+F1`. You should hear an announcement confirming screen reader mode is on.
@@ -136,7 +136,7 @@ GitHub's browser interface is excellent for reviewing, discussing, and triaging.
 | Run Accessibility Agents | Not available | Copilot Chat with agent files |
 | See errors in your contribution | After push | Real-time as you type |
 
-For Markdown contributions (which is most of what `accessibility-agents` needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.
+For Markdown contributions (which is most of what [accessibility-agents](https://github.com/Community-Access/accessibility-agents) needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.
 
 
 ---

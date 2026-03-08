@@ -480,7 +480,7 @@ After the overview: "Want to see a specific column or check a team member's work
 1. Create a new project at the organization level: name it "My Workshop Contributions"
 2. Add the **Board** layout
 3. Add a custom **Priority** field with options: P0, P1, P2
-4. Add your fork of `accessibility-agents` as a linked repository
+4. Add your fork of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) as a linked repository
 5. Add any open issue you've filed to the project
 
 ### Exercise 2: Set Up Automation

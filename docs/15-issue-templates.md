@@ -4,7 +4,7 @@
 
 ## Structuring Contributions for Clarity and Quality
 
-> Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in `accessibility-agents`, and how to create your own - including an accessibility-specific bug report template.
+> Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in [accessibility-agents](https://github.com/Community-Access/accessibility-agents), and how to create your own - including an accessibility-specific bug report template.
 
 
 ## Prerequisites Checklist
@@ -49,7 +49,7 @@ Chapter 15 is a **template design and implementation chapter** focused on struct
 
 **Goal:** Understand how professional YAML form templates work by examining the one you filled out to register for this workshop.
 
-**Where you are working:** GitHub.com - reading the template file in the `git-going-with-github` repository.
+**Where you are working:** GitHub.com - reading the template file in the [git-going-with-github](https://github.com/Community-Access/git-going-with-github) repository.
 
 **Estimated time:** 10-15 minutes.
 
@@ -180,7 +180,7 @@ Close your Chapter 15 challenge issues when done.
 
 ### If You Get Stuck
 
-1. Cannot find the registration template? Look in `.github/ISSUE_TEMPLATE/workshop-registration.yml` in the `git-going-with-github` repository.
+1. Cannot find the registration template? Look in `.github/ISSUE_TEMPLATE/workshop-registration.yml` in the [git-going-with-github](https://github.com/Community-Access/git-going-with-github) repository.
 2. YAML syntax confusing? The registration template is a working example. Copy its structure and edit the field descriptions. YAML is indented key-value pairs with 2 spaces per level.
 3. YAML not parsing? Compare with the remix sample in `learning-room/docs/samples/chapter-15-registration-remix-example.yml` and check indentation.
 4. Template does not appear in the chooser? Verify: filename ends in `.yml` or `.md`, you pushed the commit, and the file is in `.github/ISSUE_TEMPLATE/` folder.
@@ -558,7 +558,7 @@ Screen reader and browser information is especially important for us to reproduc
 <details>
 <summary>Visual / mouse users</summary>
 
-1. Navigate to your fork of `accessibility-agents` on GitHub
+1. Navigate to your fork of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) on GitHub
 2. Click the **Settings** tab
 3. Scroll to the "Features" section → click the checkmark next to "Issues" → click **"Set up templates"**
 4. Or navigate directly to `.github/ISSUE_TEMPLATE/` in your fork → click the `+` button → "Create new file"
@@ -571,7 +571,7 @@ Screen reader and browser information is especially important for us to reproduc
 <details>
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
-1. Navigate to your fork of `accessibility-agents` on GitHub
+1. Navigate to your fork of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) on GitHub
 2. Go to the Settings tab (press `T` from the tabs landmark, then navigate to "Settings")
 3. Scroll to the "Features" section → find "Issues" → activate "Set up templates"
 
@@ -588,7 +588,7 @@ Screen reader and browser information is especially important for us to reproduc
 
 ### Creating Markdown Templates: The VS Code Workflow
 
-1. Open your `accessibility-agents` fork in VS Code
+1. Open your [accessibility-agents](https://github.com/Community-Access/accessibility-agents) fork in VS Code
 2. Navigate in Explorer to `.github/ISSUE_TEMPLATE/`
 3. Create a new file: `Ctrl+N` → save as `your-template-name.md` in that folder
 4. Add frontmatter first (between `---` delimiters), then the body
@@ -891,7 +891,7 @@ A group of checkboxes. Contributors can select multiple options or use as a veri
 
 ## 7. Building an Accessibility Bug Report Template
 
-This is the hands-on activity. You will create a YAML form template specifically for accessibility bug reports in `accessibility-agents`.
+This is the hands-on activity. You will create a YAML form template specifically for accessibility bug reports in [accessibility-agents](https://github.com/Community-Access/accessibility-agents).
 
 ### Full Template
 
@@ -1395,7 +1395,7 @@ After submitting, answer:
 **Prerequisites:**
 
 - You have already read Section 7 thoroughly (Building an Accessibility Bug Report Template)
-- You have a fork of `accessibility-agents` (created on Day 1)
+- You have a fork of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) (created on Day 1)
 - VS Code is installed on your machine
 - Git is installed and configure with your GitHub credentials
 
@@ -1442,7 +1442,7 @@ After submitting, answer:
 
 ##### What to do
 
-1. From the terminal, while in your `accessibility-agents` folder, type:
+1. From the terminal, while in your [accessibility-agents](https://github.com/Community-Access/accessibility-agents) folder, type:
 
    ```bash
    code .
@@ -1454,12 +1454,12 @@ After submitting, answer:
 ##### What you should see
 
 - VS Code opens a new window
-- The left sidebar shows the folder structure of `accessibility-agents`
-- At the top, you see the folder name: `accessibility-agents`
+- The left sidebar shows the folder structure of [accessibility-agents](https://github.com/Community-Access/accessibility-agents)
+- At the top, you see the folder name: [accessibility-agents](https://github.com/Community-Access/accessibility-agents)
 
 ##### If `code .` doesn't work
 
-- Use VS Code's File menu: **File** → **Open Folder** → navigate to your `accessibility-agents` folder
+- Use VS Code's File menu: **File** → **Open Folder** → navigate to your [accessibility-agents](https://github.com/Community-Access/accessibility-agents) folder
 
 
 #### Step 3: Navigate to the Templates Folder
@@ -1544,7 +1544,7 @@ After submitting, answer:
 ##### What to do
 
 1. Open the terminal in VS Code: **Terminal** → **New Terminal** (or `Ctrl+` ` on Windows)
-2. You should be in the `accessibility-agents` folder already
+2. You should be in the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) folder already
 3. Create a new branch for this change:
 
    ```bash
@@ -1576,7 +1576,7 @@ After submitting, answer:
 
 ##### If you get errors
 
-- "Not a git repository" → Make sure you opened the `accessibility-agents` folder in VS Code
+- "Not a git repository" → Make sure you opened the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) folder in VS Code
 - "Permission denied" → Make sure you authenticated with GitHub (see Prerequisites)
 
 

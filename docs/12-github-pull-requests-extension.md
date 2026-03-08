@@ -31,7 +31,7 @@ Chapter 12 introduces the **GitHub Pull Requests extension** for managing PRs di
 
 **Goal:** Install the GitHub Pull Requests and Issues extension and authenticate with your GitHub account.
 
-**Where you are working:** VS Code desktop with the `learning-room` repository open.
+**Where you are working:** VS Code desktop with the [learning-room](https://github.com/Community-Access/learning-room) repository open.
 
 **Estimated time:** 3-5 minutes.
 
@@ -46,7 +46,7 @@ Chapter 12 introduces the **GitHub Pull Requests extension** for managing PRs di
 
 **Screen reader tip:** After step 5, if the install notification disappears before you can read it, open Command Palette (`Ctrl+Shift+P`) and run `Notifications: Focus Notification Toast`.
 
-**You are done when:** The GitHub section appears in your Explorer sidebar and shows pull requests from the `learning-room` repository.
+**You are done when:** The GitHub section appears in your Explorer sidebar and shows pull requests from the [learning-room](https://github.com/Community-Access/learning-room) repository.
 
 ### Challenge 12.2 Step-by-Step: Check Out a PR and Post a Comment
 

@@ -789,7 +789,7 @@ Every guide from this workshop lives in your fork. Clone your fork once and the 
 git clone https://github.com/[your-username]/accessibility-agents.git
 ```
 
-The documentation set is in the `docs/` folder of this learning repository (separate from the `accessibility-agents` fork). If your workshop facilitator shared a repository link for the learning materials, clone that too.
+The documentation set is in the `docs/` folder of this learning repository (separate from the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) fork). If your workshop facilitator shared a repository link for the learning materials, clone that too.
 
 ### Quick Navigation
 

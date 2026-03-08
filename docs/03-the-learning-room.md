@@ -55,7 +55,7 @@ Throughout Day 1, you work on **two parallel learning tracks**:
 - **Block 5:** Your first real contribution (you and 5-20 other students contributing simultaneously)
 - **Block 6:** Community tools (labels, milestones, notifications)
 
-**Scope:** The shared `learning-room` repository (one repo, visible to everyone)  
+**Scope:** The shared [learning-room](https://github.com/Community-Access/learning-room) repository (one repo, visible to everyone)  
 **Bot:** The Learning Room automation bot validates PRs and tracks progress  
 **Pace:** Structured by facilitator; synchronized with workshop schedule  
 **Purpose:** Collaborative practice of the full workflow (issue → branch → PR → review → merge)

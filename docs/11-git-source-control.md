@@ -24,13 +24,13 @@ Chapter 11 is the first **local Git workflow chapter** with hands-on repository 
 
 ### Chapter 11 Challenge Set
 
-1. **Clone the sci-fi themes repository** - clone `vscode-sci-fi-themes` to your local machine using VS Code.
+1. **Clone the sci-fi themes repository** - clone [vscode-sci-fi-themes](https://github.com/Community-Access/vscode-sci-fi-themes) to your local machine using VS Code.
 2. **Create a branch and make one commit** - create a named branch, edit a theme file, stage, write a clear commit message, and commit locally.
 3. **Push and open a linked PR** - push your branch and open a PR that references your challenge issue.
 
 ### Challenge 11.1 Step-by-Step: Clone the Sci-Fi Themes Repository
 
-**Goal:** Get a local copy of the `vscode-sci-fi-themes` repository on your machine using VS Code.
+**Goal:** Get a local copy of the [vscode-sci-fi-themes](https://github.com/Community-Access/vscode-sci-fi-themes) repository on your machine using VS Code.
 
 **Where you are working:** VS Code desktop (or github.dev if you cannot install desktop VS Code).
 
@@ -47,7 +47,7 @@ This repo contains custom Copilot Chat loading phrases from three sci-fi univers
 
 **Screen reader tip:** After step 6, VS Code shows a progress notification. NVDA reads this automatically. If you hear nothing for 30 seconds, open the Command Palette and run `Notifications: Focus Notification Toast` to check status.
 
-**You are done when:** The `vscode-sci-fi-themes` folder is open in VS Code and you can see the `themes/` folder with its three JSON files (star-trek, hitchhikers, star-wars) in the Explorer panel.
+**You are done when:** The [vscode-sci-fi-themes](https://github.com/Community-Access/vscode-sci-fi-themes) folder is open in VS Code and you can see the `themes/` folder with its three JSON files (star-trek, hitchhikers, star-wars) in the Explorer panel.
 
 > **After cloning: check what branches exist.** A fresh clone only checks out the default branch (usually `main`), but the remote may have other branches. Run `git branch -a` in the terminal (`Ctrl+`` `) to see all branches - local and remote:
 >
@@ -70,7 +70,7 @@ This repo contains custom Copilot Chat loading phrases from three sci-fi univers
 
 **Goal:** Create a properly named branch, edit a theme file, stage the change, and commit with a clear message.
 
-**Where you are working:** VS Code with the cloned `vscode-sci-fi-themes` repository open.
+**Where you are working:** VS Code with the cloned [vscode-sci-fi-themes](https://github.com/Community-Access/vscode-sci-fi-themes) repository open.
 
 1. Open the Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
 2. Type `git create branch` and select **Git: Create Branch...**
@@ -105,13 +105,13 @@ This repo contains custom Copilot Chat loading phrases from three sci-fi univers
 
 **Screen reader tip:** The "Compare & pull request" banner is a standard link element near the top of the repository page. If your screen reader does not find it, use the heading navigation to jump to the Pull Requests tab instead.
 
-**Cross-repo linking:** Because your challenge issue lives in `learning-room` but your PR is in `vscode-sci-fi-themes`, you use the full format `Closes Community-Access/learning-room#XX` instead of just `Closes #XX`. GitHub resolves cross-repo references automatically.
+**Cross-repo linking:** Because your challenge issue lives in [learning-room](https://github.com/Community-Access/learning-room) but your PR is in [vscode-sci-fi-themes](https://github.com/Community-Access/vscode-sci-fi-themes), you use the full format `Closes Community-Access/learning-room#XX` instead of just `Closes #XX`. GitHub resolves cross-repo references automatically.
 
-**You are done when:** Your PR appears on the Pull requests tab of `vscode-sci-fi-themes`, shows your branch name, and the description contains the cross-repo reference to your challenge issue.
+**You are done when:** Your PR appears on the Pull requests tab of [vscode-sci-fi-themes](https://github.com/Community-Access/vscode-sci-fi-themes), shows your branch name, and the description contains the cross-repo reference to your challenge issue.
 
 ### Completing Chapter 11: Submit Your Evidence
 
-Open your **assigned Chapter 11.3 challenge issue** in the `learning-room` repo and post a completion comment:
+Open your **assigned Chapter 11.3 challenge issue** in the [learning-room](https://github.com/Community-Access/learning-room) repo and post a completion comment:
 
 ```text
 Chapter 11 completed:

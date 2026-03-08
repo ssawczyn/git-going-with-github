@@ -47,7 +47,7 @@ Chapter 6 is the first **PR-validated chapter** where students convert issue wor
 
 **Goal:** Edit one of the practice files and save your change on a new branch.
 
-**Where you are working:** the `learning-room` repository on GitHub.com, using the web editor.
+**Where you are working:** the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com, using the web editor.
 
 **Before you start:** Open your **assigned Chapter 6.1 challenge issue** (the one titled "Chapter 6.1: Create One Small Branch Change (@yourname)"). The issue description tells you which file to edit and what to fix.
 
@@ -63,7 +63,7 @@ The following table summarizes the practice files in the learning-room, what eac
 
 **Steps using the web editor:**
 
-1. In the `learning-room` repository, navigate to the file specified in your issue. Use the file tree or the "Go to file" button (`T` keyboard shortcut).
+1. In the [learning-room](https://github.com/Community-Access/learning-room) repository, navigate to the file specified in your issue. Use the file tree or the "Go to file" button (`T` keyboard shortcut).
 2. Open the file and activate the **pencil icon** (Edit this file) button.
    - Screen reader users (NVDA/JAWS): Press `B` to navigate buttons, find "Edit this file," and press `Enter`.
    - VoiceOver users: Press `VO+U`, open Buttons rotor, find "Edit this file," and press `VO+Space`.
@@ -1240,7 +1240,7 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 > Once you have mastered manual pull request review:
 >
 > - **In VS Code** - `@pr-review review PR #N` generates line-numbered diffs with change maps, risk assessment, before/after snapshots, CI results, and suggested inline comments - a documented starting point for your own review, not a replacement for it
-> - **In your repo** - Accessibility Agents' review capabilities work across every repository you have access to by default; fork `accessibility-agents` and those capabilities travel with your project from day one
+> - **In your repo** - Accessibility Agents' review capabilities work across every repository you have access to by default; fork [accessibility-agents](https://github.com/Community-Access/accessibility-agents) and those capabilities travel with your project from day one
 > - **In the cloud** - GitHub Agentic Workflows can auto-generate PR descriptions, verify linked issues, and post accessibility impact summaries on a `pull_request` trigger - running the moment a PR is opened, whether or not anyone is watching
 >
 > *The agent documents the diff. You bring the context that no diff can contain.*

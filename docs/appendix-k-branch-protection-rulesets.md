@@ -294,7 +294,7 @@ The `community-access/accessibility-agents` repository uses the following branch
 | Signed commits | No (to reduce friction for workshop participants) |
 | Restrict direct pushes | Yes - all changes must come through PRs |
 
-**Workshop tip:** Your personal fork of `accessibility-agents` has no branch protection by default. If you want to practice the full "review before merge" workflow with a partner, you can add branch protection to your fork:
+**Workshop tip:** Your personal fork of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) has no branch protection by default. If you want to practice the full "review before merge" workflow with a partner, you can add branch protection to your fork:
 
 ```text
 Your fork → Settings → Branches → Add branch protection rule

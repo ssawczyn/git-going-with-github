@@ -258,7 +258,7 @@ When you push commits to GitHub, each commit shows a small badge: **Verified** o
 
 ### Why It Matters
 
-Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to `accessibility-agents` and your commits show "Unverified," a maintainer may ask you to sign them before the PR can be merged.
+Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to [accessibility-agents](https://github.com/Community-Access/accessibility-agents) and your commits show "Unverified," a maintainer may ask you to sign them before the PR can be merged.
 
 ### Two Methods for Signing Commits
 

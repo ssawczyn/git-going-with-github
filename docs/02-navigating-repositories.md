@@ -640,7 +640,7 @@ Navigate to the [Accessibility Agents repository](https://github.com/community-a
 
 > ### Day 2 Amplifier - Accessibility Agents: `@daily-briefing`
 >
-> **Navigate every folder of `accessibility-agents` manually today before using any agent.** Find `.github/agents/`, open a `.agent.md` file, and read it - that file is how an agent knows what to do. You must understand the structure before you can evaluate whether an agent understood it correctly.
+> **Navigate every folder of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) manually today before using any agent.** Find `.github/agents/`, open a `.agent.md` file, and read it - that file is how an agent knows what to do. You must understand the structure before you can evaluate whether an agent understood it correctly.
 >
 > Once you have mastered manual repository navigation:
 >

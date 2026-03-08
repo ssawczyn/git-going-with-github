@@ -65,7 +65,7 @@ Chapter 16 is the **agent exploration and hands-on validation chapter** - where 
 
 **Goal:** Map your Day 1 manual skills to specific agents in the ecosystem so you know which agents you are ready to use.
 
-**Where you are working:** GitHub.com - the `accessibility-agents` repository and your assigned Chapter 16 challenge issue.
+**Where you are working:** GitHub.com - the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) repository and your assigned Chapter 16 challenge issue.
 
 **Estimated time:** 20 minutes.
 
@@ -74,7 +74,7 @@ If 55 agents feels too broad, start with this beginner sequence:
 - `@issue-tracker` (maps to Chapter 4 issue workflow)
 - `@pr-review` (maps to Chapter 6 and Chapter 14 review workflow)
 
-1. Fork the `accessibility-agents` repository on GitHub.com.
+1. Fork the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) repository on GitHub.com.
 2. Open the repository and navigate to Section 3 of the README (or this chapter's Section 3 below) to see the full list of 55 agents organized by team.
 3. Read through the agent names and descriptions. For each one, ask yourself: "Have I done this task manually during the workshop?"
 4. Identify 3-5 agents that match workflows you already practiced:
@@ -103,11 +103,11 @@ I am ready because I have already: [specific skill from Day 1]
 
 **Goal:** Run one agent, read its output, and evaluate whether it matches your manual experience.
 
-**Where you are working:** VS Code with the `accessibility-agents` repository cloned and Copilot Chat open.
+**Where you are working:** VS Code with the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) repository cloned and Copilot Chat open.
 
 **Estimated time:** 30 minutes.
 
-1. Clone your fork of `accessibility-agents` to VS Code (or open it in github.dev).
+1. Clone your fork of [accessibility-agents](https://github.com/Community-Access/accessibility-agents) to VS Code (or open it in github.dev).
 2. Open Copilot Chat: `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`).
 3. Choose one agent from your discovery list. If unsure, start with `@daily-briefing` or `@issue-tracker`.
 4. Run it with a simple prompt. Examples:
@@ -139,11 +139,11 @@ Did the agent miss anything important that you would catch?
 
 **Goal:** Read one agent's source file to understand what instructions it follows, what tools it can use, and what mistakes it could make.
 
-**Where you are working:** VS Code or GitHub.com - reading files in the `accessibility-agents` repository.
+**Where you are working:** VS Code or GitHub.com - reading files in the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) repository.
 
 **Estimated time:** 15 minutes.
 
-1. In the `accessibility-agents` repository, navigate to the `.github/` folder (or wherever agent definition files are stored).
+1. In the [accessibility-agents](https://github.com/Community-Access/accessibility-agents) repository, navigate to the `.github/` folder (or wherever agent definition files are stored).
 2. Open one `.agent.md` or `.prompt.md` file for an agent you used or are curious about.
 3. Read the file and identify:
    - What is this agent trying to do? (its purpose)
@@ -374,7 +374,7 @@ Commit `preferences.md` to your fork. Now the agents know who you are and what y
 
 ### How Agents Travel with Your Repo
 
-When you fork `accessibility-agents`, the `.github/agents/` folder comes with it. This means:
+When you fork [accessibility-agents](https://github.com/Community-Access/accessibility-agents), the `.github/agents/` folder comes with it. This means:
 
 - Any collaborator who clones your fork gets all 55 agents automatically
 - You can customize agents for your specific project by editing the `.agent.md` files in your fork
@@ -1367,7 +1367,7 @@ You've built templates manually (Chapters 15-16) and seen them in action. Now se
 
 - Complete Chapters 15-16 (especially Exercise D - designing your own template)
 - VS Code is installed and GitHub Copilot is active
-- You have forked `accessibility-agents` to your GitHub account
+- You have forked [accessibility-agents](https://github.com/Community-Access/accessibility-agents) to your GitHub account
 - You have cloned your fork locally: `git clone https://github.com/[your-username]/accessibility-agents.git`
 
 
@@ -1383,9 +1383,9 @@ You've built templates manually (Chapters 15-16) and seen them in action. Now se
 ###### What to do
 
 1. Open VS Code
-2. **File** → **Open Folder** → select your locally cloned `accessibility-agents` folder
+2. **File** → **Open Folder** → select your locally cloned [accessibility-agents](https://github.com/Community-Access/accessibility-agents) folder
 3. The folder tree appears on the left showing the repository structure
-4. **Verify you're in the right place:** The folder name should be `accessibility-agents` at the top of the sidebar
+4. **Verify you're in the right place:** The folder name should be [accessibility-agents](https://github.com/Community-Access/accessibility-agents) at the top of the sidebar
 
 ###### What you should see
 
@@ -2058,7 +2058,7 @@ The same Markdown-authored pattern extends further:
 - **Runs on:** Their machine, using their Copilot subscription
 - **Reaches:** Their GitHub account's repositories
 
-When you fork `accessibility-agents`, all 55 agents come with it. You can edit them for your project's context. You can add new ones. You can share them with every contributor who clones your fork.
+When you fork [accessibility-agents](https://github.com/Community-Access/accessibility-agents), all 55 agents come with it. You can edit them for your project's context. You can add new ones. You can share them with every contributor who clones your fork.
 
 ### Scope 3: The Cloud (GitHub Agentic Workflows)
 

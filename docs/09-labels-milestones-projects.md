@@ -24,9 +24,9 @@ Chapter 9 is a **guided triage chapter** focused on organization skills.
 
 **Goal:** Read the details of a Learning Room issue and post a structured triage recommendation that a maintainer could act on immediately.
 
-**Where you are working:** your assigned Chapter 9 challenge issue in the `learning-room` repository on GitHub.com, plus one other open issue you will triage.
+**Where you are working:** your assigned Chapter 9 challenge issue in the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com, plus one other open issue you will triage.
 
-1. Open the **Issues** tab in the `learning-room` repository.
+1. Open the **Issues** tab in the [learning-room](https://github.com/Community-Access/learning-room) repository.
 2. Find any **open issue** that does not already have labels applied (or pick one your facilitator assigns).
 3. Read the issue title and full description carefully. Note:
    - What type of work is it? (documentation fix, bug report, accessibility improvement, new content)
@@ -488,7 +488,7 @@ Or from within a project:
 
 ## Practical Organization Strategy for the Hackathon
 
-Here is a recommended structure for the `learning-room` sandbox project:
+Here is a recommended structure for the [learning-room](https://github.com/Community-Access/learning-room) sandbox project:
 
 ### Labels to create
 

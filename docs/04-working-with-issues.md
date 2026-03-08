@@ -44,9 +44,9 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
 
 **Goal:** File a new issue in the Learning Room repository with a specific title and a meaningful description.
 
-**Where you are working:** the Issues tab of the `learning-room` repository on GitHub.com.
+**Where you are working:** the Issues tab of the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com.
 
-1. Open the `learning-room` repository in your browser.
+1. Open the [learning-room](https://github.com/Community-Access/learning-room) repository in your browser.
 2. Navigate to the **Issues** tab (press `G` then `I` to jump there with keyboard shortcuts, or find the "Issues" link in the repository navigation).
 3. Activate the **New issue** button.
 4. If a template picker appears, select **Open a blank issue** (or choose a template if one fits).
@@ -67,9 +67,9 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
 
 **Goal:** Leave a comment on another student's issue and use an @mention to notify them.
 
-**Where you are working:** the Issues tab of the `learning-room` repository on GitHub.com.
+**Where you are working:** the Issues tab of the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com.
 
-1. Open the **Issues** tab in the `learning-room` repository.
+1. Open the **Issues** tab in the [learning-room](https://github.com/Community-Access/learning-room) repository.
 2. Find an issue created by a classmate (look for issues from Challenge 4.1, or browse recent open issues).
 3. Open the issue by activating its title link.
 4. Read the issue description to understand what they reported.
@@ -204,7 +204,7 @@ An issue is a discussion thread attached to a repository. Issues are used for:
 
 Every issue has a **number** (`#42`), a **state** (Open or Closed), a **title**, a **description**, and a **comment thread**. Issues are public by default on public repositories.
 
-> **Learning Room connection:** In the `learning-room` repo, every challenge from `docs/CHALLENGES.md` becomes an issue. For example, Challenge 1 ("Fix Broken Link") is filed as an issue pointing to `docs/welcome.md`, describing the broken link and linking to the challenge success criteria. When you open a PR to fix it, you reference the issue with `Closes #XX` to automatically close it on merge.
+> **Learning Room connection:** In the [learning-room](https://github.com/Community-Access/learning-room) repo, every challenge from `docs/CHALLENGES.md` becomes an issue. For example, Challenge 1 ("Fix Broken Link") is filed as an issue pointing to `docs/welcome.md`, describing the broken link and linking to the challenge success criteria. When you open a PR to fix it, you reference the issue with `Closes #XX` to automatically close it on merge.
 
 
 ## Navigating to the Issues List
@@ -1060,7 +1060,7 @@ Go to the Learning Room repository and file a real issue:
 > Once you have mastered manual issue management:
 >
 > - **In VS Code** - `@issue-tracker find open issues labeled good-first-issue` searches cross-repository with community sentiment scoring, release-awareness prioritization, and batch-reply capability across every repo you have access to
-> - **In your repo** - The issue templates in `accessibility-agents/.github/ISSUE_TEMPLATE/` structure both human filing and automated triage; fork `accessibility-agents` and that structure travels into any project you lead
+> - **In your repo** - The issue templates in `accessibility-agents/.github/ISSUE_TEMPLATE/` structure both human filing and automated triage; fork [accessibility-agents](https://github.com/Community-Access/accessibility-agents) and that structure travels into any project you lead
 > - **In the cloud** - GitHub Agentic Workflows triage new issues the moment they are opened: applying labels, posting first-response comments, adding to Project boards - the same triage actions you practiced manually today, running at scale
 >
 > *Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.*

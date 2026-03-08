@@ -31,7 +31,7 @@ Chapter 14 is the **code review chapter** focused on practicing constructive fee
 
 **Estimated time:** 15-20 minutes.
 
-1. Open the `learning-room` repository on GitHub.com and navigate to the **Pull requests** tab.
+1. Open the [learning-room](https://github.com/Community-Access/learning-room) repository on GitHub.com and navigate to the **Pull requests** tab.
 2. Find a classmate's open PR (from Chapter 6, 7, or 11). Open it.
 3. Activate the **Files changed** tab. This shows the diff - lines added in green, lines removed in red.
 4. Navigate the diff:
