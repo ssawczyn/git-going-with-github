@@ -1,4 +1,4 @@
-name: Build EPUB and Word
+name: Build EPUB, Word, DAISY, and BRF
 
 on:
   push:
@@ -34,6 +34,28 @@ jobs:
       - name: Build EPUB and Word
         run: node scripts/build-epub.js
 
+      - name: Install DAISY Pipeline 2 CLI
+        run: |
+          curl -sL https://github.com/daisy/pipeline-assembly/releases/download/v1.15.1/pipeline2-1.15.1_linux.zip -o pipeline2.zip
+          unzip -q pipeline2.zip -d pipeline2
+          echo "$PWD/pipeline2/cli" >> $GITHUB_PATH
+
+      - name: Convert EPUB to DAISY (talking book)
+        run: |
+          pipeline2/cli/dp2 epub3-to-daisy3 \
+            --epub epub/git-going-with-github.epub \
+            --output epub/daisy/ \
+            --temp /tmp/dp2-daisy
+
+      - name: Convert EPUB to BRF (Braille)
+        run: |
+          pipeline2/cli/dp2 epub3-to-pef \
+            --epub epub/git-going-with-github.epub \
+            --output epub/git-going-with-github.brf \
+            --temp /tmp/dp2-brf \
+            --stylesheet "http://www.daisy.org/pipeline/modules/braille/css-utils/transform/css-block.xsl" \
+            --output-format brf
+
       - name: Upload EPUB artifact
         uses: actions/upload-artifact@v4
         with:
@@ -46,6 +68,20 @@ jobs:
         with:
           name: git-going-with-github-word
           path: epub/git-going-with-github.docx
+          retention-days: 90
+
+      - name: Upload DAISY artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-going-with-github-daisy
+          path: epub/daisy/
+          retention-days: 90
+
+      - name: Upload BRF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-going-with-github-brf
+          path: epub/git-going-with-github.brf
           retention-days: 90
 
       - name: Commit outputs to repository
