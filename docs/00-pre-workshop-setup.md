@@ -465,6 +465,8 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 > **VS Code does not install Git.** It detects whether Git is already on your system. If Git is missing, the Source Control panel will display a warning, and all `git` commands in the terminal will fail. Install Git before installing VS Code.
 
+> **Already have VS Code installed?** No problem -- you do not need to reinstall it. Just install Git using the instructions below, then restart VS Code. VS Code detects Git automatically on startup, so after a restart, the Source Control panel and all `git` commands in the terminal will work immediately. No extra configuration is needed.
+
 #### Windows
 
 1. Download the Git for Windows installer from [Git for Windows download page](https://git-scm.com/download/win)
