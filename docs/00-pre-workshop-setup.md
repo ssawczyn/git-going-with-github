@@ -111,9 +111,9 @@ GitHub also sends a **separate** email verification link after account creation.
 
 ### Enable two-factor authentication (2FA): detailed guidance and workshop policy
 
-Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised. For this workshop, 2FA is required. We recommend using the **GitHub Mobile app** for the smoothest experience - see the options below.
+Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised. GitHub now requires 2FA for all accounts, so you may already have it enabled. If not, set it up now. We recommend using the **GitHub Mobile app** for the smoothest experience - see the options below.
 
-Quick steps to enable 2FA
+### Quick steps to enable 2FA
 
 1. Open the [GitHub security settings page](https://github.com/settings/security) while signed in.
 2. Under **Two-factor authentication**, choose **Enable** and follow the prompts.
@@ -123,7 +123,7 @@ Quick steps to enable 2FA
     - **Security key / passkey** (most secure): hardware security keys (YubiKey, etc.) or platform passkeys (biometric device credentials).
     - **SMS / text message** (least preferred): can be used if other options are unavailable.
 
-Detailed setup notes
+### Detailed setup notes
 
 - Authenticator app (recommended):
   - Visual users: scan the QR code with your authenticator app and enter the 6-digit code shown.
@@ -135,12 +135,12 @@ Detailed setup notes
 - SMS / text message:
   - Enter your phone number and verify the code sent via text. Use only if authenticator apps or keys are unavailable.
 
-Recovery and backup
+### Recovery and backup
 
 - After enabling 2FA, GitHub will display **recovery (single-use) codes**. Immediately copy, download, or securely store these codes (password manager or physically secure location). They are the only fallback if you lose your second-factor device.
 - Consider registering more than one second-factor method (e.g., authenticator app + a hardware key) to avoid account lockout.
 
-Authenticating Git with GitHub: browser-based sign-in (OAuth)
+### Authenticating Git with GitHub: browser-based sign-in (OAuth)
 
 When you use Git inside VS Code or GitHub Desktop, you do not need to manage passwords, tokens, or SSH keys manually. These tools use **browser-based OAuth sign-in** - the same "Sign in with GitHub" flow you use on any website:
 
@@ -163,7 +163,7 @@ That is it. No tokens to generate, no keys to create, no strings to paste. If yo
 
 > **Tip - GitHub Mobile for push notification 2FA:** If you have not already, install the free [GitHub Mobile](https://github.com/mobile) app (iOS and Android). Once linked to your account, every 2FA prompt becomes a single tap on a push notification instead of typing a 6-digit code. The app supports VoiceOver (iOS) and TalkBack (Android).
 
-Workshop policy
+### Workshop policy
 
 For this workshop, participants need a GitHub account with 2FA enabled. The browser-based sign-in described above handles all Git authentication automatically - no additional setup is required beyond having a working GitHub account.
 
@@ -279,6 +279,10 @@ Theme is on a separate page: [GitHub Appearance Settings](https://github.com/set
 
 Your GitHub profile is your public identity in the open source community. Setting it up properly helps maintainers know who you are.
 
+### Who are maintainers?
+
+Maintainers are the people who manage a repository -- they review contributions, respond to issues, merge pull requests, and keep the project running. When you open an issue or submit a pull request, a maintainer is the person who will see it and respond. Setting up your profile helps maintainers know who you are and builds trust in the community.
+
 ### Update your profile
 
 1. Navigate to [Settings → Public profile](https://github.com/settings/profile)
@@ -289,9 +293,9 @@ Your GitHub profile is your public identity in the open source community. Settin
    - **Website or social links** - optional
    - **Pronouns** - GitHub supports adding pronouns to your profile
 
-### Add a profile picture (optional)
+### Add a profile picture (strongly recommended)
 
-A profile picture humanizes your contributions. It can be a photo or any image. If you prefer not to use a photo, GitHub generates a default avatar based on your username.
+A profile picture is strongly recommended because it humanizes your contributions and helps maintainers and collaborators recognize you across issues, pull requests, and comments. It can be a photo or any image that represents you. If you prefer not to use a photo, GitHub generates a default avatar based on your username.
 
 ### Set your notification email
 
