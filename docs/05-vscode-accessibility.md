@@ -107,6 +107,7 @@ Tool setup is part of contribution skill. A stable, accessible editor reduces st
 7. [The Status Bar](#7-the-status-bar)
 8. [The Menu Bar](#8-the-menu-bar)
 9. [Settings Sync](#9-settings-sync)
+    - [Profiles](#profiles)
 10. [The Settings Editor](#10-the-settings-editor)
 11. [The Keyboard Shortcuts Editor](#11-the-keyboard-shortcuts-editor)
 12. [Essential Keyboard Navigation and Find/Filter](#12-essential-keyboard-navigation-and-findfilter)
@@ -203,7 +204,7 @@ Change the domain in any GitHub URL:
 Everything in the list below works **exactly like desktop VS Code**:
 
 - **Full text editor with syntax highlighting**
-- **All VS Code keyboard shortcuts** (see [Keyboard Reference](13-github-copilot.md#8-keyboard-shortcuts-reference))
+- **All VS Code keyboard shortcuts** (see [Section 11: Keyboard Shortcuts Editor](#11-the-keyboard-shortcuts-editor) and [Appendix M](appendix-m-vscode-accessibility-reference.md#5-complete-keyboard-shortcuts))
 - **Screen reader mode** (`Shift+Alt+F1` to activate - Mac: `Shift+Option+F1`)
 - **File Explorer** (`Ctrl+Shift+E` - Mac: `Cmd+Shift+E`) - browse the entire repository
 - **Search across files** (`Ctrl+Shift+F` - Mac: `Cmd+Shift+F`)
@@ -384,6 +385,8 @@ Before diving into individual features, here is how VS Code is organized. Every 
 | r    |   Copilot status, encoding, notifications)         |
 +------+---------------------------------------------------+
 ```
+
+**Text description of the layout above:** VS Code has five major regions arranged in a grid. The **Menu Bar** spans the full width across the top. Below it, the **Activity Bar** runs vertically along the left edge (it contains icons for Explorer, Source Control, Search, Extensions, and more). The **Sidebar** appears to the right of the Activity Bar and shows content for the selected activity (file tree, search results, etc.). The **Editor Area** fills the large central region where your files open. Below the Editor Area, the **Panel** stretches across the bottom and contains the Terminal, Problems, Output, and Debug Console tabs. Finally, the **Status Bar** runs along the very bottom showing line number, column, language mode, Git branch, Copilot status, encoding, and notifications.
 
 ### Navigating Between Regions
 
@@ -745,6 +748,95 @@ If settings differ between machines, VS Code shows a merge editor where you choo
 - The sync status appears as a circular arrow icon in the Activity Bar (bottom-left, near Accounts)
 - Conflicts and sync status are shown via notification banners
 - Use `Ctrl+Shift+P` then "Settings Sync: Show Synced Data" to review what was synchronized
+
+</details>
+
+### Profiles
+
+VS Code **Profiles** let you create named collections of settings, extensions, keyboard shortcuts, snippets, tasks, and UI state. Each profile is independent - switching profiles changes your entire VS Code configuration instantly. This is useful when you work in different contexts (workshop vs. daily development) or need to present with different display settings.
+
+#### Creating a Profile
+
+| Method | Steps |
+| --- | --- |
+| Command Palette | `Ctrl+Shift+P` then type `Profiles: Create Profile` |
+| Gear menu | Click the gear icon (bottom-left of Activity Bar) then `Profiles` then `Create Profile` |
+
+When creating a profile, you choose what to include:
+
+- **Settings** - editor preferences, accessibility options, theme
+- **Keyboard Shortcuts** - all custom keybindings
+- **Extensions** - which extensions are installed and enabled
+- **Snippets** - code snippet definitions
+- **Tasks** - task runner configurations
+- **UI State** - sidebar position, panel layout, view visibility
+
+You can start from the current configuration, an empty profile, or an existing profile template.
+
+#### Switching Profiles
+
+| Method | Steps |
+| --- | --- |
+| Command Palette | `Ctrl+Shift+P` then type `Profiles: Switch Profile` |
+| Gear menu | Click the gear icon then `Profiles` then select a profile name |
+| Status Bar | The current profile name appears in the Status Bar when you are not using the Default profile - click it to switch |
+
+The active profile name appears in the VS Code title bar and Status Bar so you always know which configuration is active.
+
+#### Workshop Profile Recommendations
+
+Create these profiles before the workshop:
+
+| Profile Name | Purpose | Key Settings |
+| --- | --- | --- |
+| **Workshop** | Accessibility-optimized for this event | Screen reader mode on, accessibility signals enabled, minimap off, word wrap on (see the [Recommended Workshop Profile](#recommended-workshop-profile) settings in Section 17) |
+| **Presentation** | Large fonts for demos or shared screens | `editor.fontSize: 24`, `terminal.integrated.fontSize: 20`, `window.zoomLevel: 2`, High Contrast theme |
+| **Default** | Your everyday development settings | Whatever you normally use |
+
+#### Exporting and Sharing Profiles
+
+Profiles can be exported and shared:
+
+1. `Ctrl+Shift+P` then type `Profiles: Export Profile`
+2. Choose what to include (settings, extensions, etc.)
+3. Export as a **GitHub gist** (shareable link) or a **local file**
+4. Share the link or file with others
+
+To import: `Ctrl+Shift+P` then `Profiles: Import Profile` and paste the gist URL or select the file.
+
+**Workshop tip:** Facilitators can export a pre-configured Workshop profile as a GitHub gist and share the link. Students import it in one step and immediately have all accessibility settings configured.
+
+#### Profiles and Settings Sync
+
+Profiles sync across machines through Settings Sync. When you create a profile on one machine and have Settings Sync enabled, the profile appears on every other machine where you are signed in. Each profile syncs independently - changes to one profile do not affect others.
+
+#### Learning Cards: Profiles
+
+<details>
+<summary>Screen reader users</summary>
+
+- The Command Palette is the fastest way to switch profiles: `Ctrl+Shift+P` then type `Switch Profile`
+- Your screen reader announces the profile name when you switch - listen for the confirmation
+- Create a **Workshop** profile with `editor.accessibilitySupport: "on"` and all your accessibility signals configured, so you can switch to it instantly at the start of each session
+- The Default profile is always available as a fallback
+
+</details>
+
+<details>
+<summary>Low vision users</summary>
+
+- Create a **Presentation** profile with large fonts, high zoom, and a High Contrast theme for pair programming or demos
+- Switching profiles changes everything at once - no need to adjust multiple settings individually
+- The current profile name in the title bar confirms which configuration is active
+
+</details>
+
+<details>
+<summary>Sighted users</summary>
+
+- The gear icon in the Activity Bar (bottom-left) provides quick access to profile management
+- Profile names appear in the title bar so you always know your current context
+- Export your team's recommended profile as a GitHub gist for easy onboarding
 
 </details>
 
@@ -1845,7 +1937,7 @@ On Linux, the extension requires the ALSA shared library (`libasound`). Install 
 
 ## 19. Git Operations Inside VS Code
 
-This section previews the key Git operations you will perform inside VS Code. [Chapter 6 (Git & Source Control)](11-git-source-control.md) covers each in full detail with step-by-step walkthroughs. This is your orientation.
+This section previews the key Git operations you will perform inside VS Code. [Chapter 11 (Git & Source Control)](11-git-source-control.md) covers each in full detail with step-by-step walkthroughs. This is your orientation.
 
 ### Cloning a Repository
 

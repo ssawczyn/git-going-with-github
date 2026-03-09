@@ -117,7 +117,7 @@ If you have already cloned the repo, every file is already on your computer. Ope
 
 | Folder | Contents | Format |
 | --------  | ----------  | --------  |
-| `docs/` | All 17 chapters (00-16) and 25 appendices (A-Y) | Markdown (`.md`) |
+| `docs/` | All 17 chapters (00-16) and 31 appendices (A-Z, AA-AE) | Markdown (`.md`) |
 | `html/` | Pre-built HTML versions of every Markdown file | HTML (`.html`) |
 | `html/docs/` | HTML versions of all chapters and appendices | HTML (`.html`) |
 | `learning-room/` | Practice repository files: challenges, group exercises, setup guides | Markdown (`.md`) |

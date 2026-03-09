@@ -243,7 +243,7 @@ Accessibility is woven into every chapter.
 ## Implementation & Deployment
 
 ### Current Assets
-- **34 Markdown documents** (16 core chapters + 1 setup guide + 16 appendices A-Q + Accessibility Agents)
+- **49 Markdown documents** (16 core chapters + 1 setup guide + 31 appendices A-Z, AA-AE + Accessibility Agents)
 - **6 AI agents** fully defined and integrated
 - **10 hands-on exercises** with detailed walkthroughs
 - **4 supporting guides** (Quick Reference, Troubleshooting, Resources, FAQ)
@@ -416,16 +416,21 @@ Open curriculum invites contributions:
 ## Budget & Resources
 
 ### Current Assets (Complete)
-- **34 Markdown chapters** (~110,000 words total)
+- **49 Markdown chapters** (~200,000 words total)
   - 16 core chapters (01-16)
   - 1 pre-workshop setup guide (00)
-  - 16 appendices A-Q (no M) with reference material
-    - A: Glossary, B: Screen Reader Cheatsheet, C: Git Authentication
-    - D: Gists, E: Advanced Features, F: VS Code A11y Reference
-    - G: GitHub Actions, H: GitHub Projects, I: GitHub Discussions
-    - J: Advanced Search, K: Releases & Tags, L: Repository Insights
-    - N: GitHub Flavored Markdown [NEW], O: GitHub Security [NEW]
-    - P: Branch Protection [NEW], Q: Resources
+  - 31 appendices (A-Z, AA-AE) with reference material
+    - A: Glossary, B: Screen Reader Cheatsheet, C: Accessibility Standards
+    - D: Git Authentication, E: GitHub Flavored Markdown, F: Gists
+    - G: Discussions, H: Releases/Tags/Insights, I: GitHub Projects
+    - J: Advanced Search, K: Branch Protection/Rulesets, L: Security Features
+    - M: VS Code Accessibility Reference, N: Codespaces, O: GitHub Mobile
+    - P: GitHub Pages, Q: GitHub Actions, R: Profile/Sponsors/Wikis
+    - S: Organizations/Templates, T: Contributing to Open Source, U: Resources
+    - V: Accessibility Agents Reference, W: Copilot Reference, X: AI Models
+    - Y: Accessing Workshop Materials, Z: GitHub Skills Catalog
+    - AA: Advanced Git, AB: GitHub Desktop, AC: GitHub CLI
+    - AD: Git Security, AE: GitHub Social
   - Accessibility Agents (Chapter 16 + 54+ slash commands)
 - **55 AI agents** across 3 teams (fully documented, ready to use)
   - Integrated throughout curriculum

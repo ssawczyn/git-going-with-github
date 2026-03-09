@@ -601,6 +601,8 @@ This prevents overlapping announcements.
 
 ## 7. Settings.json Configuration Examples
 
+The configuration examples below are JSON blocks you paste into your `settings.json` file. To apply a complete set at once, consider using **VS Code Profiles** -- named configuration bundles that let you switch your entire setup instantly. See [Chapter 5, Section 9: Profiles](05-vscode-accessibility.md#profiles) for how to create, switch, export, and share profiles.
+
 ### Minimal Screen Reader Profile
 
 #### For users who prefer minimal announcements and use Accessible View manually

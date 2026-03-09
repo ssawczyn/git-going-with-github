@@ -252,7 +252,7 @@ The Facilitator guide includes templates, scripts, success metrics, and a final 
 │   ├── feed.xml                         ← RSS 2.0 podcast feed
 │   ├── README.md                        ← Production guide
 │   └── bundles/                         ← 44 generated episode source bundles
-└── docs/                               ← Full workshop curriculum (17 lessons + 26 appendices A-Z)
+└── docs/                               ← Full workshop curriculum (17 lessons + 31 appendices A-Z, AA-AE)
     ├── course-guide.md                           ← Student landing page: day-by-day overview, exercises, help
     ├── 00-pre-workshop-setup.md
     ├── 01-understanding-github-web-structure.md  ← How GitHub is organized (start here)
