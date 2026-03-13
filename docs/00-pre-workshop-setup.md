@@ -446,6 +446,9 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 - Press `Left Arrow + Right Arrow` simultaneously to toggle Quick Nav
 - With Quick Nav on: `H` = next heading, `L` = next link, `B` = next button (same as NVDA/JAWS browse mode keys)
 
+#### A note for Mac users about keyboard shortcuts
+
+Throughout this documentation, Windows keyboard shortcuts for VS Code are frequently referenced. In general, these keyboard shortcuts work on the Mac, however, Mac users should substitute `Command` whenever `Ctrl` is referenced. For example, Windows users might use the keyboard shortcut `Ctrl+Shift+P` to open the Command Palette. On the Mac, this keyboard shortcut would be `Command+Shift+P`.
 
 ### Browser Recommendations Summary
 
